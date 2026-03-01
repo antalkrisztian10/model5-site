@@ -1,0 +1,1126 @@
+﻿<!DOCTYPE html>
+<html lang="ro" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintec DIASAN | Sistem Medical Integrat</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav sticky top-0 z-50 h-[80px] flex items-center">
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="preview-homepage-v6.html" class="logo-mark">
+                <span class="logo-symbol">S/</span>
+                <span class="logo-text">sintec</span>
+            </a>
+
+            <!-- Center nav -->
+            <div class="hidden lg:flex items-center gap-8 pl-12">
+                <a href="preview-homepage-v6.html" class="nav-link">Acasa</a>
+
+                <!-- Dropdown for Software -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 focus:outline-none">
+                        Software
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 bg-brand-navylight border border-brand-text/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <a href="preview-erp.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">Sistem
+                            ERP Integrat</a>
+                        <a href="preview-diasan.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">DIASAN
+                            (Medical)</a>
+                        <a href="preview-speciale.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors">Aplicații
+                            Personalizate</a>
+                    </div>
+                </div>
+
+                <a href="preview-servicii.html" class="nav-link">Servicii</a>
+                <a href="preview-clienti.html" class="nav-link">Clienti</a>
+                <a href="preview-desprenoi.html" class="nav-link">Despre Noi</a>
+                <a href="preview-contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Caută..."
+                        class="bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-2 rounded-full text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue w-64 placeholder-gray-500 transition-all">
+                    <svg class="w-4 h-4 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-text p-2 focus:outline-none z-50 relative">
+                    <svg class="w-6 h-6 menu-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="w-6 h-6 menu-close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-navy z-[45] hidden flex-col pt-24 px-6 opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="#"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Acasa</a>
+
+            <div class="border-b border-brand-text/10 pb-4">
+                <div class="text-brand-text font-medium mb-3">Software</div>
+                <div class="flex flex-col gap-3 pl-4 border-l-2 border-brand-accent/30">
+                    <a href="preview-erp.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Sistem
+                        ERP Integrat</a>
+                    <a href="preview-diasan.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">DIASAN
+                        (Medical)</a>
+                    <a href="preview-speciale.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Aplicații
+                        Personalizate</a>
+                </div>
+            </div>
+            <a href="preview-servicii.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Servicii</a>
+            <a href="preview-clienti.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Clienti</a>
+            <a href="preview-desprenoi.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Despre
+                Noi</a>
+            <a href="preview-contact.html"
+                class="text-brand-text font-medium pb-4 hover:text-brand-accent transition-colors">Contact</a>
+        </div>
+        <div class="mt-8 relative">
+            <input type="text" placeholder="Caută..."
+                class="w-full bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-3 rounded-xl text-base focus:outline-none focus:border-brand-blue placeholder-gray-500">
+            <svg class="w-5 h-5 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Secondary Sticky Navbar (ERP Specific) -->
+    <div class="sticky top-[80px] z-30 w-full bg-brand-navylight border-b border-brand-text/5 border-brand-text/10">
+        <div class="max-w-[1400px] mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-14 md:gap-8">
+                <div class="hidden md:flex items-center gap-2">
+                    <span class="text-xs font-mono text-brand-placeholder uppercase tracking-widest">Software /</span>
+                    <span class="text-brand-accent font-semibold text-sm">DIASAN (Medical)</span>
+                </div>
+                <!-- Sub nav links -->
+                <div
+                    class="flex flex-1 justify-between md:justify-end md:flex-none items-center w-full md:w-auto h-full gap-2 sm:gap-6 md:gap-8 overflow-hidden">
+                    <a href="#prezentare"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-text border-b-[3px] border-brand-accent h-full flex items-center text-center justify-center leading-[1.1]">Prezentare<br
+                            class="md:hidden"> generală</a>
+                    <a href="#module"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Module</a>
+                    <a href="#clienti"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Clienți</a>
+                    <a href="#faq"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Întrebări<br
+                            class="md:hidden"> frecvente</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="preview-contact.html"
+                        class="bg-brand-text/10 hover:bg-brand-text/20 text-brand-text text-xs font-bold py-1.5 px-4 rounded-full transition-colors border border-brand-text/10 whitespace-nowrap">Solicită
+                        Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIASAN Hero Section -->
+    <section
+        class="relative bg-brand-navy overflow-hidden min-h-[500px] lg:min-h-[550px] flex items-center pt-8 md:pt-0">
+        <!-- Angled Background Image Overlay -->
+        <div class="absolute top-0 right-0 w-full lg:w-[60%] h-full z-0 opacity-60 lg:opacity-100">
+            <div class="absolute inset-0 bg-cover bg-center hidden lg:block"
+                style="background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2000&auto=format&fit=crop'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);">
+            </div>
+            <!-- Mobile alternative without clip path -->
+            <div class="absolute inset-0 bg-cover bg-center lg:hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2000&auto=format&fit=crop');">
+            </div>
+            <!-- Gradient fades to blend the image into the dark background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand-navy/40 "></div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 w-full relative z-10 py-16">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block mb-4 text-brand-blue font-mono text-xs font-bold tracking-[0.2em] uppercase">Sistem
+                    pentru Sănătate</span>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6 leading-[1.15]">
+                    Sistem Informatic DIASAN
+                </h1>
+                <p class="text-lg md:text-xl text-brand-textlight font-light mb-10 max-w-xl leading-relaxed">
+                    Soluție software completă și sigură pentru managementul eficient al unităților spitalicești și
+                    clinicilor medicale, optimizând fluxul de pacienți și gestionarea resurselor.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="preview-contact.html"
+                        class="bg-brand-blue hover:bg-blue-600 text-brand-text font-bold py-3.5 px-8 rounded-full transition-transform hover:-translate-y-0.5 shadow-lg shadow-brand-blue/30 flex items-center gap-2">
+                        Solicită un demo
+                    </a>
+                    <a href="#module"
+                        class="bg-brand-text/5 hover:bg-brand-text/10 border border-brand-text/20 text-brand-text font-bold py-3.5 px-8 rounded-full transition-colors flex items-center gap-2">
+                        Descoperă modulele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 1: Prezentare Generală (SAP Style Text/Video + Grid) -->
+    <section id="prezentare"
+        class="py-24 bg-brand-navy relative z-10 reveal scroll-mt-24 border-t border-brand-text/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight max-w-4xl">
+                Îmbunătățește actul medical prin digitalizare și fluxuri clinice integrate
+            </h2>
+            <p class="text-brand-textlight text-lg md:text-xl mb-16 max-w-3xl font-light">
+                Conectează personalul medical, echipamentele și pacienții într-o singură platformă securizată. Redu
+                timpul administrativ pentru a te concentra pe excelența în îngrijirea pacientului.
+            </p>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <!-- Image placeholder left -->
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-text/10 aspect-video group cursor-pointer bg-brand-navylight">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                        alt="Medici lucrand la sistem">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                    </div>
+                </div>
+
+                <!-- Text lists right -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-6 font-display">Soluția DIASAN te poate ajuta:</h3>
+                    <ul class="space-y-4 text-brand-textlight font-light text-lg">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să gestionezi internarea pacienților și consultațiile la nivel de secție.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să urmărești actele medicale și administrarea medicamentelor prin modulul
+                                Nursing.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să controlezi și asiguri aprovizionarea secțiilor prin eliberarea condicilor de
+                                farmacie.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să generezi situații statistice, economice și de export DRG la standardul legal la
+                                zi.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4 Column Benefits Grid bottom -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Management Pacienți</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Controlează fluxul pacienților de la internare, cazare și consultare, până la arhivarea
+                        externărilor.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Monitorizare Tratament</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Acoperă activitățile asistentelor pentru eliberarea condicilor, materialelor sanitare și
+                        administrarea medicamentelor.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Control și Analiză</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Obține liste detaliate la nivel de secție: situații statistice, economice, radiologii și
+                        explorări funcționale.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Configurabilitate & DRG</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Adaptează modulele la structura de tratamente a spitalului și automatizează exportul lunar al
+                        pacienților înapoi în sistemul național.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 2: Module (Interactive Tabs) -->
+    <section id="module" class="py-24 relative z-10 reveal scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Module Medicale Principale
+                </h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Alege dintr-o gamă largă de instrumente conectate, configurabile pentru laboratoare, cabinete
+                    ambulatorii, sau rețele de clinici private.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-10">
+                <!-- Tabs List -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button
+                        class="module-tab active text-center px-6 py-3 rounded-full border border-brand-text/10 bg-brand-text/5 hover:bg-brand-text/10 text-brand-text font-medium transition-all"
+                        data-target="mod-internari">
+                        Internări
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-consultari">
+                        Consultări
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-nursing">
+                        Nursing
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-farmacie">
+                        Farmacie
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-statistica">
+                        Statistică
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-config">
+                        Config
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-drg">
+                        DRG
+                    </button>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="w-full grid mt-6">
+                    <!-- Internari -->
+                    <div id="mod-internari"
+                        class="module-content active row-start-1 col-start-1 opacity-100 transition-opacity duration-500 z-10">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Internari">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul Internări</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Punctul central pentru culegerea datelor pacienților. Permite internarea rapidă a
+                                    pacienților cu CNP cunoscut, a nou-născuților, pacienților străini sau a cazurilor
+                                    de urgență (comă) fără identitate.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Gestionarea pacienților aflați în evidență sau în arhivă</span>
+                                    </li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Crearea foii de observație la internare</span></li>
+                                </ul>
+                                <button onclick="openModal('mod-internari-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Consultari -->
+                    <div id="mod-consultari"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1631217872822-1c2546d6b864?q=80&w=1191&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-full h-full object-cover opacity-80" alt="Consultari Secție">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul Consultări</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Modulul central al aplicației. Permite cazarea, consultarea, externarea și
+                                    unificarea informațiilor medicale. Gestionează analizele, evoluția zilnică, regimul
+                                    alimentar și transferul pacienților între secții.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Generare foaie de mișcare și centralizatoare lunare</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Evidența pe secție și alocare medic curant</span>
+                                    </li>
+                                </ul>
+                                <button onclick="openModal('mod-consultari-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nursing -->
+                    <div id="mod-nursing"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Nursing">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul Nursing</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Dedicat asistenților medicali pentru gestionarea programărilor la analize și
+                                    trasabilitatea tratamentului. Asigură evidența clară a administrării medicamentelor
+                                    și materialelor sanitare per pacient.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Crearea și gestionarea condicilor de secție</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Marcarea electronică a administrării medicamentelor</span></li>
+                                </ul>
+                                <button onclick="openModal('mod-nursing-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Farmacie -->
+                    <div id="mod-farmacie"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Inventar Medical">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul Farmacie</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Controlează aprovizionarea secțiilor și eliberează condicile din secții și aparate.
+                                    Interfațare directă cu stocurile de medicamente și inventarul materialelor sanitare.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Eliberarea cantitativă și valorică pe condici de secție</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Returnări și corecții stoc prin note de intrare/recepție</span>
+                                    </li>
+                                </ul>
+                                <button onclick="openModal('mod-farmacie-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Statistica -->
+                    <div id="mod-statistica"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1691934310598-27528df21f9c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-full h-full object-cover opacity-80" alt="Grafice Statistica">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul Statistică
+                                </h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Asigură raportările esențiale la nivel de spital. Generează liste la nivel de secție
+                                    și liste centralizatoare, incluzând situații statistice, economice și situații de
+                                    radiologie.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Centralizatoare lunare per pacient și pe spital</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Evoluția zilnică din secție</span></li>
+                                </ul>
+                                <button onclick="openModal('mod-statistica-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Config -->
+                    <div id="mod-config"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Configurare Sistem">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul Config
+                                </h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Motorul de parametrizare al sistemului DIASAN. Gestionează structura dinamică a
+                                    spitalului, asociază tratamentele diagnosticului și controlează politicile de
+                                    securitate.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Nomenclator de boli (ICD10), medici și secții din spital</span>
+                                    </li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Crearea pachetelor de tratamente pentru diferite afecțiuni</span>
+                                    </li>
+                                </ul>
+                                <button onclick="openModal('mod-config-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DRG -->
+                    <div id="mod-drg"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="w-full h-full object-cover opacity-80" alt="DRG Export">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Export DRG
+                                </h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Modulul tehnic de preluare automată a pacienților și de exportare lunară a datelor
+                                    pentru DRG Național (Diagnosis Related Groups), validând structura înainte de
+                                    trimitere.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Preluarea pacienților cu bilet de trimitere asigurați CNP</span>
+                                    </li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Exportul lunar automat a bazei de date DRG</span></li>
+                                </ul>
+                                <button onclick="openModal('mod-drg-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Marquee Section (Re-Added) -->
+    <section id="clienti" class="marquee-container reveal scroll-mt-24 pb-20 pt-10 overflow-hidden">
+        <div class="text-center mb-10">
+            <h2 class="font-display text-3xl font-bold text-brand-text mb-4">Clienți care utilizează SINTEC DIASAN</h2>
+            <p class="text-sm font-mono text-brand-textlight uppercase tracking-widest font-semibold">Organizații de top
+                din România</p>
+        </div>
+        <div class="marquee-content">
+            <!-- First Set -->
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul Clinic de Urgență „Prof. Dr. Agrippa
+                    Ionescu“</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Recuperare Borșa</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul Municipal Dej</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Pneumoftiziologie Baia Mare
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Serviciul Judeţean de Ambulanţă Maramureş
+                </span></div>
+
+            <!-- Second Set (Duplicate for seamless loop) -->
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul Clinic de Urgență „Prof. Dr. Agrippa
+                    Ionescu“</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Recuperare Borșa</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul Municipal Dej</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Pneumoftiziologie Baia Mare
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Serviciul Judeţean de Ambulanţă Maramureş
+                </span></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq"
+        class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1000px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Întrebări Frecvente</h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Află cum sistemul medical DIASAN se poate adapta unității tale sanitare.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Cât durează implementarea
+                            sistemului
+                            DIASAN într-o clinică sau spital?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Timpul de implementare variază între 2 și 6 luni, în funcție de complexitatea unității
+                            medicale, numărul de paturi sau de specialități, și de particularitățile fluxului de
+                            pacienți.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Este sistemul integrat cu
+                            platformele
+                            naționale CNAS (SIUI, DES, SIPE)?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Da, DIASAN respectă toate reglementările legale la zi și se integrează nativ cu platformele
+                            de stat pentru validarea rețetelor electronice și transmiterea automată la SIUI.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Se pot importa istoricele
+                            pacienților
+                            din alte aplicații medicale vechi?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Absolut. Echipa noastră de implementare evaluează baza de date veche și realizează cu
+                            prioritate migrarea fișelor pacienților și a antecedentelor pentru a asigura continuitatea
+                            asistenței medicale.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Cum se asigură confidențialitatea
+                            datelor medicale sensibile (GDPR)?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Platforma DIASAN include protocoale de securitate extinse, backup garantat și o jurnalizare
+                            strictă a accesului (audit trail) la dosarele medicale ale pacienților conform normelor
+                            GDPR.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Full Width Banner -->
+    <!-- CTA Banner Split Layout -->
+    <section
+        class="relative bg-brand-navylight flex flex-col lg:flex-row min-h-[500px] overflow-hidden reveal border-t border-brand-text/5">
+        <!-- Left Side Image -->
+        <div class="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
+            <div class="banner-diagonal-img-diasan !relative w-full h-full min-h-[300px]"></div>
+            <!-- Overlay to darken the image slightly for aesthetic purposes -->
+            <div class="absolute inset-0 bg-brand-navy/20"></div>
+            <!-- Vertical Divider Line (Visible on Desktop) -->
+            <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-brand-accent/30 z-10"></div>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-12 lg:p-24 relative">
+            <!-- Subtle background glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-text/[0.02] to-transparent pointer-events-none">
+            </div>
+
+            <div class="max-w-xl w-full relative z-10">
+                <span
+                    class="inline-block mb-4 text-brand-accent font-mono text-sm font-bold tracking-[0.2em] uppercase">Hai
+                    să colaborăm</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
+                    Ești gata să transformi ideea în realitate?
+                </h2>
+                <p
+                    class="text-xl text-brand-textlight font-light mb-10 leading-relaxed border-l-2 border-brand-accent/30 pl-6">
+                    Dacă te-ai decis că e timpul pentru o schimbare, suntem aici să facem calculele pentru tine.
+                    Solicită o ofertă personalizată și hai să trecem la treabă!
+                </p>
+                <a href="preview-contact.html"
+                    class="inline-flex items-center justify-center px-8 py-4 text-brand-navy bg-brand-accent hover:bg-brand-accentdark font-bold rounded-full transition-all duration-300 gap-3 group shadow-[0_0_20px_rgba(228,226,112,0.3)] hover:shadow-none hover:-translate-y-1">
+                    Trimite detaliile proiectului tău
+                    <svg class="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area CTA -->
+    <script src="footer.js"></script>
+
+    <!-- Modal Data Store (Hidden) pentru DIASAN Modules -->
+    <div id="modal-data-store" class="hidden">
+
+        <!-- 1. Internari -->
+        <div id="mod-internari-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Internări</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Este punctul central unde decurge culegerea primelor date ale pacienților.</p>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Functionalitati de baza:</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Deseori o parte din bolnavi nu sunt cunoscuți și din varii motive (ex: intră in comă) nu au nici
+                        un nume pentru moment dar ei vor intra prima dată prin unitatea de primiri unde i se va face o
+                        foaie de internare în „Alb” – fără Nume / Prenume;</li>
+                    <li>Este locul unde se internaza si nou-nascuti dupa o nastere;</li>
+                    <li>Sunt pacienti straini care nu au documentele in regula sau sunt in tranzit.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Secțiuni și meniuri:</h3>
+                <div class="space-y-4">
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">a) Pacienti:</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Pacienți aflați în evidență (in arhivă);</li>
+                            <li>Registrul nașterilor;</li>
+                            <li>Registrul deceselor;</li>
+                            <li>Arhiva de foii de observație.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">b) Mișcări pacienți:</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Foaia de observație – în cazul unei internări curente;</li>
+                            <li>Foaia de observație neasigurati – în cazul unei internări de urgență.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Consultari -->
+        <div id="mod-consultari-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Consultări (Secții)</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Acest modul este cel mai important, locul unde se produc o marea parte a datelor
+                    medicale și unde se cazează/internează, consultă, și de unde se externează pacientul.</p>
+
+                <div class="bg-brand-blue/10 border-l-4 border-brand-accent p-4 my-6">
+                    <p class="text-md">Foaia de mișcare este baza statistică (centralizatoarelor lunare) care se predă
+                        de către asistența sefă în fiacră dimineață (ex: la ora 7 – 8 dimineață) către conducerea
+                        spitalului unde se raporteaza nr de locuri din sectie, intrenări, extrenări, transferuri
+                        (plecări – veniri) sau cele mai nefaste decesele.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Meniuri din modulul Secții:</h3>
+                <div class="space-y-4">
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">a) Secție (Medical)</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Evidente pe secție – locul unde apare o lista cu fiecare sectie;</li>
+                            <li>Evoluție bolnav – locul medicului curant in care verifica lista de analize pe care vrea
+                                sa le faca in dimineata curenta, va putea preciza regimul alimentar dieline si care este
+                                conditia actuala si recomandarile sale pentru acest pacient.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">b) Secție (Arhivă)</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Baza dedate in care se afla tot istoricul pacientilor grupati pe boala, CNP, nume
+                                prenume, externari si internari per o perioada data de timp;</li>
+                            <li>Registru nasteri;</li>
+                            <li>Registru decese.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">c) Secție (Rapoarte)</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Tipărire foaie de evoluție (pt mapa zilnica de vizita saloane);</li>
+                            <li>Foaie de mișcare lunară sau parțială.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Nursing -->
+        <div id="mod-nursing-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Nursing</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Destinat exclusiv asistentelor medicale în vederea facilitării condicilor de secție,
+                    transferurille și preluarile orelor de manoperă (tratametne medicale la nivel de ore, minute – ce se
+                    facea odată pe un panou mare în fiecare cameră numit Nursing) și altele.</p>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Secțiuni principale:</h3>
+                <div class="space-y-4">
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">a) Medical</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Evidente pe secție (Programări analize la nivel de laborator, radiografii și explorări
+                                funcționale);</li>
+                            <li>Fișa tratamentelor (Evoluție bolnav prin preluarea medicației la diferite ore în funcție
+                                de prescripția medicului curant per o anumită perioadă de timp).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">b) Farmacie Condici</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Crearea de Condici de secție prin luarea necesarului listat prescris din Foaia de
+                                Observație din salon direct către Farmacist (de regulă această trasabilitate se făcea
+                                tipărire listă foi de evoluție => semnare asistent => trimitere pe masa farmacistului =>
+                                citire, culegere cod medicament pt a fi descărcat din unitate/ aparat sau dulap / secție
+                                => aducere fizica si predare asistentă pe baza unui bon cu semnatură.)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Farmacie -->
+        <div id="mod-farmacie-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Farmacie</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Destinat exclusiv farmaciștilor în gestionarea consumurilor de medicamente și
+                    materiale sanitare cât și descărcarea condicilor de pe secții.</p>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Tipuri de Condici:</h3>
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2">Condica de secție</h4>
+                        <p class="text-sm">Folosită pe paturi pentru cantitățile precise prelecrade și cerute pentru un
+                            pacient anume, pentru materialele sanitare (vată, seringi, mănuși) dar și pentru
+                            reglementări stricte unde unele antibiotice sau dezinfectanți se prescriu și urmăresc strict
+                            cu justificări multiple.</p>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2">Condica de aparat</h4>
+                        <p class="text-sm">Pentru stocul minim pe secție (ex: feșe de bumbac rola 30m) pe care el o va
+                            lăsa într-un dulap pe o anumită secție și prin vizite anuale și lunare va știi ce are de
+                            adus pentru formare de rezerva minimă dintr-un stoc normat.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Secțiuni principale:</h3>
+                <div class="space-y-4">
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">a) Fișe</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Eliberări (Secții / Aparat) - locul unde intră condicile descrise mai sus pentru a fi
+                                date pe zero;</li>
+                            <li>NIR-uri (Intrări recepție);</li>
+                            <li>Bonuri și Avize;</li>
+                            <li>Facturare (privată dacă se eliberează medicamente pacienților din afara spitalului).
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">b) Rapoarte</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Jurnal stocuri / NIR / Facturi;</li>
+                            <li>Balanța analitică (pe gestiune cantitativ / valoric).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Statistica -->
+        <div id="mod-statistica-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Statistică</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Destinat conducerii și departamentului de statistică medicală pentru generarea
+                    rapoartelor esențiale la nivel de spital și secții.</p>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Tipuri de Rapoarte:</h3>
+                <div class="space-y-4">
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">Raporturi Liste (Secție):</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Evoluție zilnică din secție (cazări, externări, decurs tratament, alocări analize).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">Liste (Situații statistice /
+                            Spital):
+                        </h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Centralizator lunar a cazurilor pacienților trimiși sau acceptați dintr-o perioadă;</li>
+                            <li>Centralizator a spitalului – global.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">Liste (Situații economice):</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Evoluție zilnică din secție.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-text/5 p-4 rounded-lg border border-brand-text/10">
+                        <h4 class="font-bold text-brand-text mb-2 text-brand-accent">Liste (Situații radiologie și
+                            explorări
+                            funcționale):</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            <li>Pentru unitățile mari de peste 500+ paturi, se lucrează centralizatoare privind
+                                investigarea și aparatura folosită pentru vizualizare radiologică cu nr de aparate și
+                                timp petrecut / alocal / liber.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Config -->
+        <div id="mod-config-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Configurare (Admin)</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Modulul permite maparea și configurarea sistemului pe structura administrativă și
+                    medicală a spitalului.</p>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Acțiuni disponibile:</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Se fac arondările tratamentelor dintr-un pachet pe anumite tipare de tratamente (in cazul
+                        clinicilor de profil unde tratează acceași problemă prin aceelasi pachet pentru a fi rapid setat
+                        cu un click);</li>
+                    <li>Nomenclatorul și clasificarea bolilor – se incarcă o bază de date cu liste ICD10 per patologii
+                        predefinite pentru secție sau anumită clădire;</li>
+                    <li>Sistemul de siguranță la validarea unor cerințe;</li>
+                    <li>Adăugarea medicilor cu adrese și numerele de telefon, titlurile stiintifice și funcțiile în
+                        concordanță cu CNP-urile și actele specifice de eliberate;</li>
+                    <li>Adăugarea unității cu numele și secțiile acestora cât și asociarea medicilor per secția cuvenită
+                        din cadrul spitalului;</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7. DRG -->
+        <div id="mod-drg-data">
+            <h2 class="text-3xl font-display font-bold text-brand-text mb-6">Export DRG</h2>
+            <div class="space-y-6 text-brand-textlight font-light leading-relaxed">
+                <p class="text-lg">Modul tehnic de preluare automată a pacienților și de exportare lunară a datelor
+                    pentru DRG Național.</p>
+
+                <h3 class="text-xl font-bold text-brand-text mt-8 mb-4">Funcționalități cheie:</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Preluarea si admiterea intr-o stare de validitate a pacientilor cu bilet de trimitere si CNP
+                        care vor avea si iesire lunara adica o externare confirmata si semnata de medic si bolnav sau
+                        prin raportare ca si deces;</li>
+                    <li>Validarea automata a datelor si alertarea in cazul informatiilor lipsa sau contradictorii (ex:
+                        CNP invalid, varsta necorespunzatoare diagnosticului) inainte de incarcare;</li>
+                    <li>Exportarea bazei de date sub o formulă de arhivă într-un format agreat lunar către DRG.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="module-modal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-navylightest/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-brand-navy border border-brand-text/20 rounded-2xl shadow-2xl z-10 custom-scrollbar">
+            <!-- Modal Header -->
+            <div
+                class="sticky top-0 bg-brand-navy/90 backdrop-blur-md border-b border-brand-text/10 px-8 py-6 flex justify-between items-center z-20">
+                <h3 id="modal-title" class="text-2xl font-bold font-display text-brand-text">Detalii Modul</h3>
+                <button onclick="closeModal()"
+                    class="text-brand-textlight hover:text-brand-text transition-colors p-2 bg-brand-text/5 hover:bg-brand-text/10 rounded-full">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Modal Content Area -->
+            <div id="modal-content" class="px-8 py-8">
+                <!-- Content injected here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Animation Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

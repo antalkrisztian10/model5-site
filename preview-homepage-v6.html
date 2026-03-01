@@ -1,0 +1,800 @@
+﻿<!DOCTYPE html>
+<html lang="ro" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTEC — Ecosisteme Digitale Integrate</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav sticky top-0 z-50 h-[80px] flex items-center">
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="preview-homepage-v6.html" class="logo-mark">
+                <span class="logo-symbol">S/</span>
+                <span class="logo-text">sintec</span>
+            </a>
+
+            <!-- Center nav -->
+            <div class="hidden lg:flex items-center gap-8 pl-12 h-full">
+                <a href="preview-homepage-v6.html" class="nav-link">Acasa</a>
+
+                <!-- Dropdown for Software -->
+                <div class="relative group h-full flex items-center">
+                    <button class="nav-link flex items-center gap-1 focus:outline-none">
+                        Software
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute top-[80%] left-0 mt-4 w-56 bg-brand-navylight border border-brand-text/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <a href="preview-erp.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">
+                            Sistem ERP Integrat
+                        </a>
+                        <a href="preview-diasan.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">
+                            DIASAN (Medical)
+                        </a>
+                        <a href="preview-speciale.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors">
+                            Aplicații Personalizate
+                        </a>
+                    </div>
+                </div>
+                <a href="preview-servicii.html" class="nav-link">Servicii</a>
+                <a href="preview-clienti.html" class="nav-link">Clienti</a>
+                <a href="preview-desprenoi.html" class="nav-link">Despre Noi</a>
+                <a href="preview-contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Caută..."
+                        class="bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-2 rounded-full text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue w-64 placeholder-gray-500 transition-all">
+                    <svg class="w-4 h-4 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-text p-2 focus:outline-none z-50 relative">
+                    <svg class="w-6 h-6 menu-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="w-6 h-6 menu-close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-navy z-[45] hidden flex-col pt-24 px-6 opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="preview-homepage-v6.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Acasa</a>
+
+            <div class="border-b border-brand-text/10 pb-4">
+                <div class="text-brand-text font-medium mb-3">Software</div>
+                <div class="flex flex-col gap-3 pl-4 border-l-2 border-brand-accent/30">
+                    <a href="preview-erp.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Sistem
+                        ERP Integrat</a>
+                    <a href="preview-diasan.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">DIASAN
+                        (Medical)</a>
+                    <a href="preview-speciale.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Aplicații
+                        Personalizate</a>
+                </div>
+            </div>
+            <a href="preview-servicii.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Servicii</a>
+            <a href="preview-clienti.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Clienti</a>
+            <a href="preview-desprenoi.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Despre
+                Noi</a>
+            <a href="preview-contact.html"
+                class="text-brand-text font-medium pb-4 hover:text-brand-accent transition-colors">Contact</a>
+        </div>
+        <div class="mt-8 relative">
+            <input type="text" placeholder="Caută..."
+                class="w-full bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-3 rounded-xl text-base focus:outline-none focus:border-brand-blue placeholder-gray-500">
+            <svg class="w-5 h-5 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Deep Navy Hero Section -->
+    <section class="hero-diagonal-bg min-h-[600px] lg:min-h-[70vh] flex items-center relative overflow-hidden">
+        <!-- The right side angled image backgrounds (4 total) -->
+        <div class="hero-diagonal-overlay active"
+            style="background-image: url('https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=2100&auto=format&fit=crop');">
+        </div>
+        <div class="hero-diagonal-overlay"
+            style="background-image: url('https://images.unsplash.com/photo-1583521214690-73421a1829a9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+        <div class="hero-diagonal-overlay"
+            style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+        <div class="hero-diagonal-overlay"
+            style="background-image: url('https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        </div>
+
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 relative z-10 py-20 pb-28">
+            <div class="hero-content-wrapper w-full max-w-2xl text-brand-text">
+
+                <!-- Content 0: Pachete Software -->
+                <div class="hero-content active">
+                    <h1 class="font-display text-5xl md:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+                        Ecosisteme software pentru orice domeniu
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-textlight mb-10 leading-relaxed font-light">
+                        Soluții ERP integrate, sisteme dedicate domeniului medical și aplicații personalizate,
+                        construite pe arhitecturi moderne și scalabile.
+                    </p>
+                    <a href="preview-erp.html" class="btn-cyan">
+                        Vezi pachetele
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Content 1: Istoria Sintec -->
+                <div class="hero-content">
+                    <h1 class="font-display text-5xl md:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+                        Tradiție și inovație încă din 1991
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-textlight mb-10 leading-relaxed font-light">
+                        De peste 30 de ani, Sintec dezvoltă și implementează soluții IT complexe, susținând companiile
+                        și instituțiile publice într-un mediu legislativ dinamic.
+                    </p>
+                    <a href="preview-desprenoi.html" class="btn-cyan">
+                        Află povestea noastră
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Content 2: Servicii -->
+                <div class="hero-content">
+                    <h1 class="font-display text-5xl md:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+                        Servicii complete și suport tehnic
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-textlight mb-10 leading-relaxed font-light">
+                        Sprijinim software-ul nostru cu servicii de implementare, instruire, dezvoltare la comandă și
+                        o echipă de suport helpdesk dedicată succesului tău.
+                    </p>
+                    <a href="preview-servicii.html" class="btn-cyan">
+                        Explorează serviciile
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Content 3: Oferta (cta contact) -->
+                <div class="hero-content">
+                    <h1 class="font-display text-5xl md:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+                        Impactul digitalizării sosește conform planului
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-textlight mb-10 leading-relaxed font-light">
+                        Sistemele software securizate SINTEC optimizează operațiunile financiar-contabile, bugetul,
+                        resursele umane și managementul spitalicesc mult mai rapid decât preconizează piața.
+                    </p>
+                    <a href="preview-contact.html" class="btn-cyan">
+                        Cere Ofertă
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom sub-menu anchor bar -->
+        <div
+            class="absolute bottom-0 left-0 w-full border-t border-brand-text/10 flex z-10 bg-brand-navy/60 backdrop-blur-md items-center h-[70px] overflow-x-auto scrollbar-hide">
+            <div
+                class="min-w-max md:max-w-[1400px] mx-auto px-6 lg:px-8 flex font-semibold text-sm text-brand-text h-full">
+                <a href="#" data-tab="0"
+                    class="hero-tab active flex items-center h-full px-4 border-b-2 border-brand-accent text-brand-accent transition-colors">Pachete
+                    Software</a>
+                <a href="#" data-tab="1"
+                    class="hero-tab flex items-center h-full px-8 border-b-2 border-transparent hover:text-brand-accent transition-colors">Istoria
+                    Sintec</a>
+                <a href="#" data-tab="2"
+                    class="hero-tab flex items-center h-full px-8 border-b-2 border-transparent hover:text-brand-accent transition-colors">Servicii</a>
+                <a href="#" data-tab="3"
+                    class="hero-tab flex items-center h-full px-8 border-b-2 border-transparent hover:text-brand-accent transition-colors">Oferta
+                    curentă</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Corporate Giant Text Section (Dark Theme) -->
+    <section class="giant-text-section reveal overflow-hidden">
+        <div class="px-6 relative z-10">
+            <p class="giant-text">
+                Sintec ajută instituțiile naționale să modernizeze <strong>tehnologia</strong>, să reimagineze
+                <strong>procesele</strong> și să transforme <strong>experiențele</strong> pentru a rămâne mereu un pas
+                înainte într-un mediu legislativ dinamic.
+            </p>
+        </div>
+    </section>
+
+    <!-- Client Logos Marquee Section -->
+    <section class="marquee-container reveal overflow-hidden">
+        <div class="text-center mb-6">
+            <p class="text-sm font-mono text-brand-textlight uppercase tracking-widest font-semibold">Zeci de instituții
+                publice, spitale și companii private au încredere în Sintec</p>
+        </div>
+        <!-- We duplicate the content to create a seamless loop. The total width must be animated by 50% -->
+        <div class="marquee-content">
+            <!-- First Set -->
+            <div class="marquee-item"><span class="marquee-text-logo">Consilii Județene</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">DAGSPC</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">AJPIS Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul Clinic de Urgență „Prof. Dr. Agrippa
+                    Ionescu“</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Clinica Nova</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Aeroportul Internațional Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Recuperare Borșa</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">EATON</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Sto Romania</span></div>
+
+            <!-- Second Set (Duplicate for seamless loop) -->
+            <div class="marquee-item"><span class="marquee-text-logo">Consilii Județene</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">DAGSPC</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">AJPIS Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul Clinic de Urgență „Prof. Dr. Agrippa
+                    Ionescu“</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Clinica Nova</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Aeroportul Internațional Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Recuperare Borșa</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">EATON</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Sto Romania</span></div>
+        </div>
+    </section>
+
+    <!-- Corporate Cards Grid Section (Dark Theme w/ Immersive Backgrounds) -->
+    <section class="py-24 bg-brand-card border-y border-brand-text/5 relative z-10 reveal overflow-hidden">
+        <!-- ... (Rest of the Cards code is assumed unchanged from the previous edit, but since I am replacing up to line 694, I must include it all) -->
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <h2 class="font-display text-4xl font-bold text-brand-text mb-4">Pachetele Software Oferite de noi</h2>
+            <p class="text-xl text-brand-textlight font-light mb-16 max-w-2xl">
+                Descoperiți cum inginerii noștri gestionează ecosistemul dumneavoastră tehnologic modern.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 w-full">
+
+                <!-- ERP Card -->
+                <div class="bg-card group">
+                    <div class="bg-card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop');">
+                    </div>
+                    <div class="bg-card-overlay"></div>
+
+                    <div class="bg-card-content">
+                        <!-- Top Tag -->
+                        <div class="absolute top-8 left-8">
+                            <span
+                                class="inline-block bg-brand-navylightest/40 backdrop-blur-md border border-brand-text/20 text-brand-text text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded">
+                                SISTEM ECONOMIC
+                            </span>
+                        </div>
+
+                        <h3 class="text-3xl font-bold text-brand-text mb-4 leading-tight font-display">ERP Integrat
+                        </h3>
+                        <p class="text-brand-textlight font-light leading-relaxed max-w-sm">
+                            Platformă completă pentru managementul resurselor întreprinderii, automatizarea proceselor
+                            financiare, de achiziții și resurse umane.
+                        </p>
+
+                        <a href="preview-erp.html" class="bg-card-link">
+                            Planifică o demonstrație ERP
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Diasan Card -->
+                <div class="bg-card group">
+                    <div class="bg-card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop');">
+                    </div>
+                    <div class="bg-card-overlay"></div>
+
+                    <div class="bg-card-content">
+                        <!-- Top Tag -->
+                        <div class="absolute top-8 left-8">
+                            <span
+                                class="inline-block bg-brand-navylightest/40 backdrop-blur-md border border-brand-text/20 text-brand-text text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded">
+                                SISTEM MEDICAL
+                            </span>
+                        </div>
+
+                        <h3 class="text-3xl font-bold text-white mb-4 leading-tight font-display">DIASAN</h3>
+                        <p class="text-brand-textlight font-light leading-relaxed max-w-sm">
+                            Un ecosistem software dedicat spitalelor și clinicilor, proiectat pentru trasabilitatea
+                            pacientului, stocurilor și gestiunea medicală.
+                        </p>
+
+                        <a href="preview-diasan.html" class="bg-card-link">
+                            Află detaliile modulului
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Custom Apps Card -->
+                <div class="bg-card group">
+                    <div class="bg-card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop');">
+                    </div>
+                    <div class="bg-card-overlay"></div>
+
+                    <div class="bg-card-content">
+                        <!-- Top Tag -->
+                        <div class="absolute top-8 left-8">
+                            <span
+                                class="inline-block bg-brand-navylightest/40 backdrop-blur-md border border-brand-text/20 text-brand-text text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded">
+                                DEZVOLTARE LA COMANDĂ
+                            </span>
+                        </div>
+
+                        <h3 class="text-3xl font-bold text-brand-text mb-4 leading-tight font-display">Aplicații
+                            Personalizate
+                        </h3>
+                        <p class="text-brand-textlight font-light leading-relaxed max-w-sm">
+                            Software construit de la zero adaptat viziunii tale. Arhitectură nativă cloud, integrări
+                            complexe și scalabilitate imediată.
+                        </p>
+
+                        <a href="preview-speciale.html" class="bg-card-link">
+                            Consultă divizia tehnică
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficii / De ce Noi Section (Premium Typography Redesign) -->
+    <section class="py-24 bg-brand-navylight relative z-10 reveal border-b border-brand-text/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <span
+                        class="inline-block mb-3 text-brand-accent font-mono text-xs font-bold tracking-[0.2em] uppercase">Avantaj
+                        Competitiv</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text leading-tight">
+                        De ce aleg liderii din industrie SINTEC?
+                    </h2>
+                </div>
+                <p class="text-brand-textlight font-light text-lg max-w-md leading-relaxed">
+                    Nu livrăm doar linii de cod, ci construim parteneriate strategice pe baza unei fundații solide de
+                    expertiză, transparență și stabilitate tehnologică.
+                </p>
+            </div>
+
+            <!-- Premium Numbered Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+                <!-- Card 01 -->
+                <div
+                    class="group relative bg-brand-text/[0.02] border border-brand-text/5 p-10 lg:p-12 rounded-2xl overflow-hidden hover:bg-brand-text/[0.04] transition-colors duration-500">
+                    <div class="absolute top-0 right-0 p-8">
+                        <span
+                            class="font-display text-7xl font-bold text-brand-darkest/[0.03] group-hover:text--brand-darkest/[0.08] transition-colors duration-500 delay-100">01</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="font-display text-2xl font-bold text-brand-text mb-4">
+                            Experiență de 30+ Ani
+                        </h3>
+                        <p class="text-brand-textlight font-light leading-relaxed text-lg max-w-sm">
+                            Pionieri în digitalizarea din România. Am traversat toate erele tehnologice și aplicăm cele
+                            mai bune practici verificate în zeci de implementări la nivel național.
+                        </p>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 h-1.5 w-0 bg-brand-blue group-hover:w-full transition-all duration-700 ease-out">
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div
+                    class="group relative bg-brand-text/[0.02] border border-brand-darkest/5 p-10 lg:p-12 rounded-2xl overflow-hidden hover:bg-brand-text/[0.04] transition-colors duration-500">
+                    <div class="absolute top-0 right-0 p-8">
+                        <span
+                            class="font-display text-7xl font-bold text-brand-darkest/[0.03] group-hover:text-brand-darkest/[0.08] transition-colors duration-500 delay-100">02</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="font-display text-2xl font-bold text-brand-text mb-4">
+                            Echipă Multidisciplinară
+                        </h3>
+                        <p class="text-brand-textlight font-light leading-relaxed text-lg max-w-sm">
+                            Ingineri software, arhitecți de sistem, analiști financiari și experți în legislație lucrând
+                            în sinergie pentru a traduce cerințele complexe în soluții simple.
+                        </p>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 h-1.5 w-0 bg-purple-500 group-hover:w-full transition-all duration-700 ease-out">
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div
+                    class="group relative bg-brand-text/[0.02] border border-brand-darkest/5 p-10 lg:p-12 rounded-2xl overflow-hidden hover:bg-brand-text/[0.04] transition-colors duration-500">
+                    <div class="absolute top-0 right-0 p-8">
+                        <span
+                            class="font-display text-7xl font-bold text-brand-darkest/[0.03] group-hover:text-brand-darkest/[0.08] transition-colors duration-500 delay-100">03</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="font-display text-2xl font-bold text-brand-text mb-4">
+                            Livrabile Agile & Scalabile
+                        </h3>
+                        <p class="text-brand-textlight font-light leading-relaxed text-lg max-w-sm">
+                            Folosim ecosisteme modulare preconfigurate pentru a lansa rapid fundația, iterând apoi pe
+                            funcționalitățile specifice afacerii tale cu zero întreruperi.
+                        </p>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 h-1.5 w-0 bg-brand-accent group-hover:w-full transition-all duration-700 ease-out">
+                    </div>
+                </div>
+
+                <!-- Card 04 -->
+                <div
+                    class="group relative bg-brand-text/[0.02] border border-brand-darkest/5 p-10 lg:p-12 rounded-2xl overflow-hidden hover:bg-brand-text/[0.04] transition-colors duration-500">
+                    <div class="absolute top-0 right-0 p-8">
+                        <span
+                            class="font-display text-7xl font-bold text-brand-darkest/[0.03] group-hover:text-brand-darkest/[0.08] transition-colors duration-500 delay-100">04</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="font-display text-2xl font-bold text-brand-text mb-4">
+                            Securitate & SLA Garantat
+                        </h3>
+                        <p class="text-brand-textlight font-light leading-relaxed text-lg max-w-sm">
+                            Datele izolate și protejate conform celor mai stricte standarde. Mentenanță proactivă și
+                            disponibilitate garantată contractual prin acorduri (SLA) riguroase.
+                        </p>
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 h-1.5 w-0 bg-green-500 group-hover:w-full transition-all duration-700 ease-out">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicii Section (SAP-Inspired Floating Layout) -->
+    <section class="py-24 relative z-20 reveal overflow-visible">
+        <!-- Vibrant diagonal background matching the style in the screenshot -->
+        <div
+            class="absolute top-0 left-0 w-full lg:w-[70%] h-full bg-brand-dark z-0 lg:[clip-path:polygon(0_0,100%_0,85%_100%,0%_100%)]">
+        </div>
+
+        <!-- Dark overlay to blend the right side with the overall dark theme -->
+        <div class="absolute top-0 right-0 w-full lg:w-[40%] h-full bg-brand-navy -z-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-brand-navy -z-20"></div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+
+            <!-- Left Content: Text & Services Grid -->
+            <div class="text-brand-text pt-8 pb-12 pr-0 lg:pr-12">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Obține rezultatele dorite <br /> <span class="text-brand-accent">cu serviciile SINTEC</span>
+                </h2>
+                <p class="text-lg md:text-xl text-brand-text/90 font-light mb-10 max-w-lg leading-relaxed">
+                    Accelerăm creșterea afacerii tale cu un pachet complet de servicii, conceput pentru stabilitate,
+                    flexibilitate și performanță garantată la nivel național.
+                </p>
+
+                <!-- 2-col Services Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 mb-12">
+                    <!-- Service Item 1 -->
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-7 h-7 rounded-full bg-brand-text/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-[15px] tracking-wide">Implementare</span>
+                    </div>
+                    <!-- Service Item 2 -->
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-7 h-7 rounded-full bg-brand-text/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-[15px] tracking-wide">Instruire</span>
+                    </div>
+                    <!-- Service Item 3 -->
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-7 h-7 rounded-full bg-brand-text/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-[15px] tracking-wide">Suport Tehnic</span>
+                    </div>
+                    <!-- Service Item 4 -->
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-7 h-7 rounded-full bg-brand-text/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-[15px] tracking-wide">Mentenanță</span>
+                    </div>
+                    <!-- Service Item 5 -->
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-7 h-7 rounded-full bg-brand-text/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-[15px] tracking-wide">Consultanță</span>
+                    </div>
+                    <!-- Service Item 6 -->
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-7 h-7 rounded-full bg-brand-text/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-[15px] tracking-wide">Administrare Baze de Date</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="preview-servicii.html" class="btn-cyan">
+                        Află mai multe
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <!-- Secondary Button outline -->
+                    <a href="preview-contact.html"
+                        class="px-8 py-3.5 rounded-full font-bold text-brand-text border-2 border-brand-text/30 hover:border-brand-text hover:bg-brand-text/10 transition-all whitespace-nowrap inline-flex justify-center">
+                        Cere Ofertă
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image with overlapping/foreground effect -->
+            <!-- We make the container pull slightly to the left to overlap the diagonal background -->
+            <div class="relative w-full lg:w-[110%] lg:-ml-[10%] xl:-ml-[15%] z-20 mt-10 lg:mt-0">
+
+                <style>
+                    .float-fast {
+                        animation: float-anim 5s ease-in-out infinite;
+                    }
+
+                    .float-slow {
+                        animation: float-anim 7s ease-in-out infinite;
+                        animation-delay: 1.5s;
+                    }
+
+                    @keyframes float-anim {
+                        0% {
+                            transform: translateY(0px);
+                        }
+
+                        50% {
+                            transform: translateY(-12px);
+                        }
+
+                        100% {
+                            transform: translateY(0px);
+                        }
+                    }
+                </style>
+
+                <!-- Main Image Container -->
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-text/10 transform transition-transform duration-700 hover:scale-[1.02]">
+                    <!-- Fallback color while image loads -->
+                    <div class="absolute inset-0 bg-brand-navylight/50"></div>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Prezentare servicii software"
+                        class="relative z-10 w-full h-auto object-cover max-h-[500px]" />
+                </div>
+
+                <!-- Connecting line visual element -->
+                <svg class="absolute top-1/3 -right-6 hidden lg:block w-12 h-32 z-10 text-brand-text/30"
+                    preserveAspectRatio="none" viewBox="0 0 20 100">
+                    <path d="M 10 10 L 10 90" stroke="currentColor" stroke-width="2" stroke-dasharray="2 4"
+                        fill="none" />
+                    <circle cx="10" cy="10" r="3" fill="currentColor" />
+                    <circle cx="10" cy="90" r="3" fill="currentColor" />
+                </svg>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Povestea Sintec Story Section -->
+    <section class="py-24 bg-brand-navylight relative z-10 reveal border-b border-brand-text/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Side: Text Story -->
+            <div class="max-w-2xl">
+                <!-- Eyebrow Tag -->
+                <span
+                    class="inline-block mb-4 text-brand-accent font-mono text-xs font-bold tracking-[0.2em] uppercase">Despre
+                    Noi</span>
+
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-8 leading-tight">
+                    Povestea <span class="text-brand-blue">Sintec</span>
+                </h2>
+
+                <div class="space-y-6 text-brand-textlight font-light text-lg leading-relaxed">
+                    <p>
+                        <strong class="text-brand-text font-medium">SINTEC Baia Mare</strong> este o companie de top
+                        specializată în dezvoltarea de soluții software integrate. Cu o vastă experiență pe piața din
+                        România, creăm sisteme ERP performante, software medical avansat (DIASAN) și aplicații la
+                        comandă, perfect adaptate pentru a optimiza și digitaliza fluxurile de lucru din orice
+                        industrie.
+                    </p>
+                    <p>
+                        Suntem mai mult decât un simplu furnizor de tehnologie; <strong
+                            class="text-brand-text font-medium">suntem partenerul strategic al clienților
+                            noștri</strong>.
+                        Echipa noastră îmbină expertiza tehnică de cel mai înalt nivel cu o înțelegere profundă a
+                        proceselor complexe de business și a rigurozității din sistemul medical. Înțelegem că fiecare
+                        organizație este unică, motiv pentru care soluțiile noastre nu sunt doar implementate, ci sunt
+                        modelate cu grijă în jurul nevoilor tale specifice.
+                    </p>
+                    <p>
+                        Credem că succesul unui software stă în ușurința cu care este adoptat de echipă. De aceea, la
+                        SINTEC, procesul nu se oprește la scrierea codului. Oferim <strong
+                            class="text-brand-accent font-medium">servicii end-to-end</strong>: de la analiză și
+                        consultanță inițială, la arhitectură, testare, implementare și, cel mai important,
+                        <em>instruirea personalului și suport tehnic continuu</em>.
+                    </p>
+                    <p class="pt-4 border-t border-brand-text/10 mt-6 !text-brand-text italic text-base">
+                        "Cu noi, ai garanția că sistemul tău este mereu sigur, actualizat și pregătit să scaleze odată
+                        cu afacerea ta."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: High Contrast Light Image Setup -->
+            <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl group">
+                <!-- Using a brighter, team/consultancy focused image to contrast the dark background -->
+                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2070&auto=format&fit=crop"
+                    alt="Echipa SINTEC colaborând"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90">
+
+                <!-- A soft glowing border effect to pop off the black background -->
+                <div
+                    class="absolute inset-0 rounded-2xl border border-brand-text/10 group-hover:border-brand-accent/50 transition-colors duration-500 z-10 pointer-events-none">
+                </div>
+
+                <!-- Linear gradient to ensure bottom edge blends cleanly if needed, though with rounding it's optional -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-navy/60 to-transparent z-0"></div>
+
+                <!-- Floating stat badge for that enterprise feel -->
+                <div
+                    class="absolute bottom-10 left-10 bg-brand-text/10 backdrop-blur-md border border-brand-text/20 p-6 rounded-xl z-20 reveal max-w-[240px]">
+                    <div class="text-brand-accent text-3xl font-display font-bold mb-1">30+ Ani</div>
+                    <div class="text-brand-text text-sm font-light">de inovație continuă pe piața software din România.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Diagonal Full Width Banner -->
+    <!-- CTA Banner Split Layout -->
+    <section
+        class="relative bg-brand-navylight flex flex-col lg:flex-row min-h-[500px] overflow-hidden reveal border-t border-brand-text/5">
+        <!-- Left Side Image -->
+        <div class="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
+            <div class="banner-diagonal-img-home !relative w-full h-full min-h-[300px]"></div>
+            <!-- Overlay to darken the image slightly for aesthetic purposes -->
+            <div class="absolute inset-0 bg-brand-navy/20"></div>
+            <!-- Vertical Divider Line (Visible on Desktop) -->
+            <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-brand-accent/30 z-10"></div>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-12 lg:p-24 relative">
+            <!-- Subtle background glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-text/[0.02] to-transparent pointer-events-none">
+            </div>
+
+            <div class="max-w-xl w-full relative z-10">
+                <span
+                    class="inline-block mb-4 text-brand-accent font-mono text-sm font-bold tracking-[0.2em] uppercase">Hai
+                    să colaborăm</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
+                    Ești gata să transformi ideea în realitate?
+                </h2>
+                <p
+                    class="text-xl text-brand-textlight font-light mb-10 leading-relaxed border-l-2 border-brand-accent/30 pl-6">
+                    Dacă te-ai decis că e timpul pentru o schimbare, suntem aici să facem calculele pentru tine.
+                    Solicită o ofertă personalizată și hai să trecem la treabă!
+                </p>
+                <a href="preview-contact.html"
+                    class="inline-flex items-center justify-center px-8 py-4 text-brand-navy bg-brand-accent hover:bg-brand-accentdark font-bold rounded-full transition-all duration-300 gap-3 group shadow-[0_0_20px_rgba(228,226,112,0.3)] hover:shadow-none hover:-translate-y-1">
+                    Trimite detaliile proiectului tău
+                    <svg class="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area CTA -->
+    <script src="footer.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

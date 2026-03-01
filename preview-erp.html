@@ -1,0 +1,1154 @@
+﻿<!DOCTYPE html>
+<html lang="ro" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTEC — Ecosisteme Digitale Integrate</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav sticky top-0 z-50 h-[80px] flex items-center">
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="preview-homepage-v6.html" class="logo-mark">
+                <span class="logo-symbol">S/</span>
+                <span class="logo-text">sintec</span>
+            </a>
+
+            <!-- Center nav -->
+            <div class="hidden lg:flex items-center gap-8 pl-12">
+                <a href="preview-homepage-v6.html" class="nav-link">Acasa</a>
+
+                <!-- Dropdown for Software -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 focus:outline-none">
+                        Software
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 bg-brand-navylight border border-brand-text/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <a href="preview-erp.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">Sistem
+                            ERP Integrat</a>
+                        <a href="preview-diasan.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">DIASAN
+                            (Medical)</a>
+                        <a href="preview-speciale.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors">Aplicații
+                            Personalizate</a>
+                    </div>
+                </div>
+
+                <a href="preview-servicii.html" class="nav-link">Servicii</a>
+                <a href="preview-clienti.html" class="nav-link">Clienti</a>
+                <a href="preview-desprenoi.html" class="nav-link">Despre Noi</a>
+                <a href="preview-contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Caută..."
+                        class="bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-2 rounded-full text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue w-64 placeholder-gray-500 transition-all">
+                    <svg class="w-4 h-4 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-text p-2 focus:outline-none z-50 relative">
+                    <svg class="w-6 h-6 menu-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="w-6 h-6 menu-close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-navy z-[45] hidden flex-col pt-24 px-6 opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="preview-homepage-v6.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Acasa</a>
+
+            <div class="border-b border-brand-text/10 pb-4">
+                <div class="text-brand-text font-medium mb-3">Software</div>
+                <div class="flex flex-col gap-3 pl-4 border-l-2 border-brand-accent/30">
+                    <a href="preview-erp.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Sistem
+                        ERP Integrat</a>
+                    <a href="preview-diasan.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">DIASAN
+                        (Medical)</a>
+                    <a href="preview-speciale.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Aplicații
+                        Personalizate</a>
+                </div>
+            </div>
+            <a href="preview-servicii.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Servicii</a>
+            <a href="preview-clienti.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Clienti</a>
+            <a href="preview-desprenoi.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Despre
+                Noi</a>
+            <a href="preview-contact.html"
+                class="text-brand-text font-medium pb-4 hover:text-brand-accent transition-colors">Contact</a>
+        </div>
+        <div class="mt-8 relative">
+            <input type="text" placeholder="Caută..."
+                class="w-full bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-3 rounded-xl text-base focus:outline-none focus:border-brand-blue placeholder-gray-500">
+            <svg class="w-5 h-5 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Secondary Sticky Navbar (ERP Specific) -->
+    <div class="sticky top-[80px] z-30 w-full bg-brand-navylight border-b border-brand-text/5 border-brand-text/10">
+        <div class="max-w-[1400px] mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-14 md:gap-8">
+                <div class="hidden md:flex items-center gap-2">
+                    <span class="text-xs font-mono text-brand-placeholder uppercase tracking-widest">Software /</span>
+                    <span class="text-brand-accent font-semibold text-sm">ERP Integrat</span>
+                </div>
+                <!-- Sub nav links -->
+                <div
+                    class="flex flex-1 justify-between md:justify-end md:flex-none items-center w-full md:w-auto h-full gap-2 sm:gap-6 md:gap-8 overflow-hidden">
+                    <a href="#prezentare"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-text border-b-[3px] border-brand-accent h-full flex items-center text-center justify-center leading-[1.1]">Prezentare<br
+                            class="md:hidden"> generală</a>
+                    <a href="#module"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Module</a>
+                    <a href="#clienti"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Clienți</a>
+                    <a href="#faq"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Întrebări<br
+                            class="md:hidden"> frecvente</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="preview-contact.html"
+                        class="bg-brand-text/10 hover:bg-brand-text/20 text-brand-text text-xs font-bold py-1.5 px-4 rounded-full transition-colors border border-brand-text/10 whitespace-nowrap">Cere
+                        Oferta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ERP Hero Section (SAP Inspired) -->
+    <section
+        class="relative bg-brand-navy overflow-hidden min-h-[500px] lg:min-h-[550px] flex items-center pt-8 md:pt-0">
+        <!-- Angled Background Image Overlay -->
+        <div class="absolute top-0 right-0 w-full lg:w-[60%] h-full z-0 opacity-80 lg:opacity-100">
+            <div class="absolute inset-0 bg-cover bg-center hidden lg:block"
+                style="background-image: url('https://images.unsplash.com/photo-1707902665498-a202981fb5ac?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);">
+            </div>
+            <!-- Mobile alternative without clip path -->
+            <div class="absolute inset-0 bg-cover bg-center lg:hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1707902665498-a202981fb5ac?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            </div>
+            <!-- Gradient fades to blend the image into the dark background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/10 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand-navy/10 "></div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 w-full relative z-10 py-16">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block mb-4 text-brand-blue font-mono text-xs font-bold tracking-[0.2em] uppercase">Ecosistem
+                    de Business</span>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6 leading-[1.15]">
+                    Sistem ERP Integrat
+                </h1>
+                <p class="text-lg md:text-xl text-brand-textlight font-light mb-10 max-w-xl leading-relaxed">
+                    Dezvoltă-ți afacerea și navighează cu ușurință prin complexitatea operațională cu ajutorul soluției
+                    ERP SINTEC, adaptabilă la dinamica oricărei industrii, oferind un grad ridicat de parametrizare și
+                    scalabilitate.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="preview-contact.html"
+                        class="bg-brand-blue hover:bg-blue-600 text-brand-text font-bold py-3.5 px-8 rounded-full transition-transform hover:-translate-y-0.5 shadow-lg shadow-brand-blue/30 flex items-center gap-2">
+                        Cere o ofertă
+                    </a>
+                    <a href="#module"
+                        class="bg-brand-text/5 hover:bg-brand-text/10 border border-brand-text/20 text-brand-text font-bold py-3.5 px-8 rounded-full transition-colors flex items-center gap-2">
+                        Descoperă modulele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 1: Prezentare Generală (SAP Style Text/Video + Grid) -->
+    <section id="prezentare"
+        class="py-24 bg-brand-navy relative z-10 reveal scroll-mt-24 border-t border-brand-text/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight max-w-4xl">
+                Automatizare și control absolut asupra resurselor și proceselor
+            </h2>
+            <p class="text-brand-textlight text-lg md:text-xl mb-16 max-w-3xl font-light">
+                Sintec ERP este o suită modulară, flexibilă, care conectează contabilitatea, gestiunea stocurilor,
+                producția, vânzările și resursele umane într-o singură platformă integrată, perfect adaptată
+                legislației.
+            </p>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <!-- Image placeholder left -->
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-text/10 aspect-video group cursor-pointer bg-brand-navylight">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                    </div>
+                </div>
+
+                <!-- Text lists right -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-6 font-display">Soluțiile SINTEC ERP te pot ajuta:
+                    </h3>
+                    <ul class="space-y-4 text-brand-textlight font-light text-lg">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să automatizezi înregistrările contabile și să obții balanțe sau rapoarte financiare
+                                instantanee.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să gestionezi stocurile și aprovizionarea cu precizie maximă (FIFO, LIFO, PMP)
+                                multi-gestiune.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să urmărești eficient încasările și plățile din facturi sau contracte cu solduri în
+                                timp real.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să controlezi producția de la necesarul de materiale primare până la predarea
+                                produselor finite.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4 Column Benefits Grid bottom -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Evidență Centralizată</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Toate mișcările de bunuri și bani se propagă automat în sistem, reducând masiv operarea manuală
+                        și eliminând datele redundante.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Configurare și Parametrizare</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Sistemul permite adaptarea la fluxul de lucru prin metode de evidență personalizabile,
+                        caracteristici arbitrare și rapoarte total dinamice.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Raportare Avansată</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Extrage decizii din liste detaliate, de la execuția bugetară, parcursul lunar al mijloacelor
+                        fixe, până la starea de realizare a comenzilor.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Aliniere Legislativă</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Modulele de salarizare și contabilitate se actualizează prompt cu orice modificare legată de
+                        declarațiile CAS, e-Factura, și norme fiscale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 2: Module (Interactive Tabs) -->
+    <section id="module" class="py-24 relative z-10 reveal scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Module ERP Principale</h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Gestionează fiecare departament al afacerii tale cu module specializate, complet integrate într-o
+                    bază de date unică.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-10">
+                <!-- Tabs List -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button
+                        class="module-tab active text-center px-6 py-3 rounded-full border border-brand-text/10 bg-brand-text/5 hover:bg-brand-text/10 text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-balans">BALANS</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-magnum">MAGNUM</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-fare">FARE</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-amix">AMIX</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-lacom">LACOM</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-parteneri">PARTENERI</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-lapro">LAPRO</button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
+                        data-target="mod-persal">PERSAL</button>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="w-full grid mt-6">
+                    <!-- BALANS -->
+                    <div id="mod-balans"
+                        class="module-content active row-start-1 col-start-1 opacity-100 transition-opacity duration-500 z-10">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="images/Balans.png" class="w-full h-full object-fill opacity-100" alt="BALANS">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul BALANS</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Este destinat
+                                    înregistrării formulelor contabile primare, în sintetic și analitic prin care se
+                                    obțin situațiile și rapoartele necesare evidenței contabile.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Bilanțuri și balanțe automate</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Generare declarații fiscale</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-balans-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MAGNUM -->
+                    <div id="mod-magnum"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="images/Magnum.png" class="w-full h-full object-fill opacity-100" alt="MAGNUM">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul MAGNUM</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Implementează
+                                    activitatea de înregistrare a bunurilor și serviciilor cumpărate și vândute,
+                                    consumate, predate sau transferate. Evidența cantitativ - valorică.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-blue" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Gestiune elementară sau cumulativă</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-blue" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Fișa de magazie și registrul de inventar</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-magnum-modal')"
+                                    class="mt-8 text-brand-blue hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FARE -->
+                    <div id="mod-fare"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="images/Fare.png" class="w-full h-full object-fill opacity-100" alt="FARE">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul FARE</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Implementează
+                                    activitatea de urmărire a încasărilor și plăților a facturilor provenite din modulul
+                                    MAGNUM cu legătură automată spre BALANS.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Solduri furnizori & clienți</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Registrul de casă și jurnal de bancă</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-fare-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AMIX -->
+                    <div id="mod-amix"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="AMIX">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul AMIX</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Gestionarea mijloacelor
+                                    fixe și calculul amortizărilor în regim linear, degresiv sau accelerat, plus
+                                    reevaluarea automată a acestora.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-purple-500" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Liste intrări/ieșiri lunare</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-purple-500" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Modificări de valoare a patrimoniului</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-amix-modal')"
+                                    class="mt-8 text-purple-500 hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LACOM -->
+                    <div id="mod-lacom"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="images/lacom.png" class="w-full h-full object-fill opacity-100" alt="LACOM">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul LACOM</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Destinat înregistrării
+                                    comenzilor și contractelor primite de la clienți, precum și a celor către furnizori
+                                    în configurări de depozit sau generale.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Urmărirea satisfacerii comenzilor</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Reținerea automată a produselor la client</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-lacom-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PARTENERI -->
+                    <div id="mod-parteneri"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="images/Parteneri.png" class="w-full h-full object-fill opacity-100"
+                                    alt="PARTENERI">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul PARTENERI</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Gestionarea complexă a
+                                    relațiilor cu partenerii de afaceri, integrând un CRM puternic cu istoric
+                                    tranzacțional, oferte, discuții și lead-uri comerciale.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Portal pentru relații B2B</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Consolidare contracte și discount-uri automatizate</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-parteneri-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LAPRO -->
+                    <div id="mod-lapro"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="LAPRO">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul LAPRO</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Modul destinat urmăririi
+                                    avansate a producției la nivel de linie și echipament. Planifică necesarul de
+                                    materiale (MRP), eliberează ordinele și monitorizează calitatea prelucrării.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Planificare flux de fabricație</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Bord monitorizare comenzi producție</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-lapro-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PERSAL -->
+                    <div id="mod-persal"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="PERSAL">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul PERSAL</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">Este destinat calculului
+                                    salariului și a tuturor obligațiilor asiguratorii ale agentului și salariaților.
+                                    Funcționalități pentru declarațiile de șomaj și CAS.</p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Formulare unice Declarația 112</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Calcul concedii, pontaj electronic și stat de plată</span></li>
+                                </ul>
+                                <button onclick="openErpModal('mod-persal-modal')"
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    Vezi detalii complete
+                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Marquee Section (Re-Added) -->
+    <section id="clienti" class="marquee-container reveal scroll-mt-24 pb-20 pt-10 overflow-hidden">
+        <div class="text-center mb-10">
+            <h2 class="font-display text-3xl font-bold text-brand-text mb-4">Clienți care utilizează SINTEC ERP</h2>
+            <p class="text-sm font-mono text-brand-textlight uppercase tracking-widest font-semibold">Organizații de top
+                din România</p>
+        </div>
+        <!-- We duplicate the content to create a seamless loop. The total width must be animated by 50% -->
+        <div class="marquee-content">
+            <!-- First Set -->
+            <div class="marquee-item"><span class="marquee-text-logo">Administraţia Prezidenţială
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Ministerul Muncii şi Protecţiei Sociale
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">AJPIS Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Inspecţia Muncii Bucureşti
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo"> Inspectoratele Teritoriale de Muncă Judeţene
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Agenţia Naţională pentru Plăţi şi Inspecţie
+                    Socială
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Agenţiile Judeţene pentru Plăţi şi Inspecţie
+                    Socială
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Casa Naţională de Pensii Publice
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Casele Judeţene de Pensii
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Administraţia Bazinală de Apă Someş-Tisa
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Direcţia de Sănătate Publică Maramureş
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Direcţia de Sănătate Publică Sălaj
+                </span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Aeroportul Internaţional Baia Mare RA
+                </span></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq"
+        class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1000px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Întrebări Frecvente</h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Află cum platforma noastră se poate adapta cerințelor specifice de business.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Cât durează implementarea
+                            sistemului
+                            ERP?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Durata variază în funcție de complexitatea organizației și numărul de module selectate. O
+                            implementare de bază poate dura între 2-3 luni, în timp ce un sistem personalizat complex
+                            poate necesita 6-8 luni, incluzând migrarea datelor și instruirea utilizatorilor.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Este sistemul pregătit pentru
+                            e-Factura
+                            și modificările legislative fiscale?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Da. Toate modulele noastre sunt menținute la zi cu legislația din România. De exemplu,
+                            modulul PERSAL este actualizat pentru Declarația 112 (CAS, Șomaj), iar modulele FARE și
+                            BALANS sunt pregătite pentru generarea e-Factura și a jurnalelor de vânzări/cumpărări
+                            conform normelor ANAF.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Oferiți suport tehnic după
+                            finalizarea
+                            instalării?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Absolut. Asigurăm mentenanță continuă și un birou de helpdesk dedicat. Mai mult, oferim
+                            instruire pentru noii angajați și ne asigurăm că orice viitoare cerințe tehnice sunt
+                            preluate cu prioritate.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Se pot personaliza rapoartele din
+                            sistem?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Da, sistemul conține un generator de rapoarte integrat unde utilizatorul își poate selecta
+                            propriile criterii de filtrare, obținând situații recalculate la orice dată. Toate
+                            rapoartele pot fi salvate direct în Excel pentru analiză avansată.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Full Width Banner -->
+    <!-- CTA Banner Split Layout -->
+    <section
+        class="relative bg-brand-navylight flex flex-col lg:flex-row min-h-[500px] overflow-hidden reveal border-t border-brand-text/5">
+        <!-- Left Side Image -->
+        <div class="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
+            <div class="banner-diagonal-img-erp !relative w-full h-full min-h-[300px]"></div>
+            <!-- Overlay to darken the image slightly for aesthetic purposes -->
+            <div class="absolute inset-0 bg-brand-navy/20"></div>
+            <!-- Vertical Divider Line (Visible on Desktop) -->
+            <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-brand-accent/30 z-10"></div>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-12 lg:p-24 relative">
+            <!-- Subtle background glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-text/[0.02] to-transparent pointer-events-none">
+            </div>
+
+            <div class="max-w-xl w-full relative z-10">
+                <span
+                    class="inline-block mb-4 text-brand-accent font-mono text-sm font-bold tracking-[0.2em] uppercase">Hai
+                    să colaborăm</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
+                    Ești gata să transformi ideea în realitate?
+                </h2>
+                <p
+                    class="text-xl text-brand-textlight font-light mb-10 leading-relaxed border-l-2 border-brand-accent/30 pl-6">
+                    Dacă te-ai decis că e timpul pentru o schimbare, suntem aici să facem calculele pentru tine.
+                    Solicită o ofertă personalizată și hai să trecem la treabă!
+                </p>
+                <a href="preview-contact.html"
+                    class="inline-flex items-center justify-center px-8 py-4 text-brand-navy bg-brand-accent hover:bg-brand-accentdark font-bold rounded-full transition-all duration-300 gap-3 group shadow-[0_0_20px_rgba(228,226,112,0.3)] hover:shadow-none hover:-translate-y-1">
+                    Trimite detaliile proiectului tău
+                    <svg class="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Backdrop & Container -->
+    <div id="erp-modal-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-brand-navylightest/80 backdrop-blur-sm transition-opacity opacity-0"
+            id="erp-modal-backdrop" onclick="closeErpModal()"></div>
+
+        <!-- Modal Content Container -->
+        <div id="erp-modal-content"
+            class="relative w-full max-w-4xl max-h-[90vh] mx-4 bg-brand-navy border border-brand-text/10 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col transform scale-95 opacity-0 transition-all duration-300">
+
+            <!-- Modal Header -->
+            <div
+                class="flex items-center justify-between px-8 py-6 border-b border-brand-text/10 bg-brand-navylight/50 shrink-0">
+                <h3 id="modal-title" class="font-display text-2xl font-bold text-brand-text flex items-center gap-3">
+                    <span id="modal-title-accent" class="text-brand-accent">Modul</span>
+                    <span id="modal-title-text">Nume Modul</span>
+                </h3>
+                <button onclick="closeErpModal()"
+                    class="text-brand-textlight hover:text-brand-text transition-colors p-2 rounded-full hover:bg-brand-text/5 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable scrolling area) -->
+            <div class="p-8 overflow-y-auto custom-scrollbar flex-grow">
+                <div id="modal-body-container"
+                    class="prose prose-invert max-w-none text-brand-textlight font-light leading-relaxed">
+                    <!-- Content will be injected here via JS -->
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div
+                class="px-8 py-5 border-t border-brand-text/10 bg-brand-navylight/50 shrink-0 flex justify-end gap-4 items-center">
+                <button onclick="closeErpModal()"
+                    class="text-sm font-semibold text-brand-textlight hover:text-brand-text transition-colors px-4 py-2">
+                    Închide
+                </button>
+                <a href="preview-contact.html" onclick="closeErpModal()"
+                    class="bg-brand-blue hover:bg-blue-600 text-brand-text text-sm font-bold py-2.5 px-6 rounded-full transition-transform hover:-translate-y-0.5 shadow-lg shadow-brand-blue/30">
+                    Solicită personalizare
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Content Data for Modals -->
+    <div id="modal-data-store" class="hidden">
+
+        <!-- Data: Financiar (Balans + FARE) -->
+        <!-- Data: BALANS -->
+        <div id="data-mod-balans-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
+                BALANS</h4>
+            <p class="mb-4">Este destinat înregistrării formulelor contabile primare, în sintetic și analitic (până la 5
+                nivele de adâncime) prin care se obțin situațiile și rapoartele necesare evidenței contabile a
+                societății comerciale sau instituției bugetare, fără alte intervenții sau înregistrări redundante.</p>
+            <h5 class="text-lg font-bold text-brand-text font-display mt-8 mb-4">Principalele funcțiuni ale modulului
+                BALANS
+                sunt:</h5>
+            <ul class="space-y-2 list-none pl-0">
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> definirea structurii agentului
+                    economic (balanță elementară – de sine stătătoare sau cumulativă);</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> preluarea și actualizarea
+                    planului de conturi general, introducerea analiticelor specifice unității;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> înregistrarea formulelor
+                    contabile în analitic, grupate pe note și catalogate pe diferite criterii;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> obținerea de situații și
+                    rapoarte recalculate la orice dată (fișe de cont, cartea mare, registrul de casă).</li>
+            </ul>
+        </div>
+
+        <!-- Data: MAGNUM -->
+        <div id="data-mod-magnum-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-blue pl-3">Modulul
+                MAGNUM
+                (Gestiune și Stocuri)</h4>
+            <p class="mb-4">Implementează activitatea de înregistrare a bunurilor și serviciilor cumpărate și vândute,
+                consumate, predate sau transferate. Evidența este ținută în gestiune cantitativ – valorică indiferent de
+                clasificare: materiale, obiecte de inventar, produse etc.</p>
+            <h5 class="text-lg font-bold text-brand-text font-display mt-8 mb-4">Funcțiuni și documente de intrare
+                operate:
+            </h5>
+            <ul class="space-y-2 list-none pl-0">
+                <li class="flex gap-3"><span class="text-brand-blue font-bold">•</span> recepții sau DVI-uri (pentru
+                    importuri) intra și extracomunitare;</li>
+                <li class="flex gap-3"><span class="text-brand-blue font-bold">•</span> transferuri în intrare și note
+                    de
+                    predare;</li>
+                <li class="flex gap-3"><span class="text-brand-blue font-bold">•</span> obținerea de situații complexe:
+                    stocuri, balanță sintetică și analitică pe multiple criterii, fișa de magazie, registrul de
+                    inventar.</li>
+            </ul>
+        </div>
+
+        <!-- Data: FARE -->
+        <div id="data-mod-fare-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
+                FARE
+                (Urmărire Încasări/Plăți)</h4>
+            <p class="mb-4">Implementează activitatea de urmărire a încasărilor și plăților a facturilor provenite din
+                modulul MAGNUM. În procesul de operare al achitărilor se pot genera în mod automat și notele contabile
+                care se înregistrează direct în BALANS.</p>
+            <h5 class="text-lg font-bold text-brand-text font-display mt-8 mb-4">Principalele funcțiuni ale modulului
+                FARE
+                sunt:</h5>
+            <ul class="space-y-2 list-none pl-0">
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> introducerea facturilor în
+                    sold de la furnizori și către clienți;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> achitarea facturilor și
+                    încasarea de la clienți, compensări pentru parteneri bivalenți;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> obținerea situațiilor
+                    facturilor, fișa partenerilor, sume în avans, jurnalul de vânzări și cumpărări adaptate la
+                    legislația actuală.</li>
+            </ul>
+        </div>
+
+        <!-- Data: AMIX -->
+        <div id="data-mod-amix-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-purple-500 pl-3">Modulul
+                AMIX
+                (Mijloace Fixe)</h4>
+            <p class="mb-4">Are ca obiectiv gestionarea mijloacelor fixe și calculul amortizărilor. Se păstrează
+                informațiile referitoare la evidenta pe gestiuni precum și la mișcările acestora. Pentru calculul
+                amortizărilor se poate utiliza regimul linear, degresiv sau accelerat.</p>
+            <ul class="space-y-2 list-none pl-0 mt-4">
+                <li class="flex gap-3"><span class="text-purple-500 font-bold">•</span> Înregistrarea datelor (mijloace
+                    noi, transfer intern, conservare, reparatii);</li>
+                <li class="flex gap-3"><span class="text-purple-500 font-bold">•</span> Editarea de rapoarte: Liste
+                    intrări/ieșiri, parcurs lunar, modificări de valoare.</li>
+            </ul>
+        </div>
+
+        <!-- Data: LACOM -->
+        <div id="data-mod-lacom-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
+                LACOM
+                (Comenzi și Contracte)</h4>
+            <p class="mb-4">Destinat înregistrării comenzilor și contractelor primite de la clienți, precum și a celor
+                către furnizori. Funcționează în 3 configurări: de tip magazin, de tip depozit și general.</p>
+            <h5 class="text-lg font-bold text-brand-text font-display mt-8 mb-4">Principalele funcțiuni:</h5>
+            <ul class="space-y-2 list-none pl-0">
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> înregistrarea comenzilor de la
+                    clienți cu toate datele aferente;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> urmărirea satisfacerii
+                    comenzilor în legătură cu modulul MAGNUM;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> reținerea produselor pentru un
+                    client pe baza unei comenzi.</li>
+            </ul>
+        </div>
+
+        <!-- Data: PARTENERI -->
+        <div id="data-mod-parteneri-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
+                PARTENERI</h4>
+            <p class="mb-4">Gestionarea complexă a relațiilor cu partenerii de afaceri, integrând un CRM puternic cu
+                istoric tranzacțional, oferte, discuții și lead-uri comerciale.</p>
+            <ul class="space-y-2 list-none pl-0 mt-4">
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Portal pentru relații B2B;
+                </li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Consolidare contracte și
+                    discount-uri automatizate.</li>
+            </ul>
+        </div>
+
+        <!-- Data: LAPRO -->
+        <div id="data-mod-lapro-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
+                LAPRO
+            </h4>
+            <p class="mb-4">Modul destinat urmăririi avansate a producției la nivel de linie și echipament. Planifică
+                necesarul de materiale (MRP), eliberează ordinele și monitorizează calitatea prelucrării.</p>
+            <ul class="space-y-2 list-none pl-0 mt-4">
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Planificare flux de
+                    fabricație;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Bord monitorizare comenzi
+                    producție.</li>
+            </ul>
+        </div>
+
+        <!-- Data: PERSAL -->
+        <div id="data-mod-persal-modal">
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
+                PERSAL</h4>
+            <p class="mb-4">Este destinat calculului salariului și a tuturor obligațiilor asiguratorii ale agentului și
+                salariaților. Funcționalități pentru declarațiile de șomaj și CAS.</p>
+            <ul class="space-y-2 list-none pl-0 mt-4">
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Formulare unice Declarația
+                    112;</li>
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Calcul concedii, pontaj
+                    electronic și stat de plată automatizat conform noutăților legislative.</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- Footer Area CTA -->
+    <script src="footer.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Modal functions mapped globally
+        function openErpModal(modalId) {
+            const overlay = document.getElementById('erp-modal-overlay');
+            const backdrop = document.getElementById('erp-modal-backdrop');
+            const content = document.getElementById('erp-modal-content');
+            const bodyContainer = document.getElementById('modal-body-container');
+            const titleAccent = document.getElementById('modal-title-accent');
+            const titleText = document.getElementById('modal-title-text');
+
+            // Get content from the hidden store based on the requested modalId
+            const contentStore = document.getElementById('data-' + modalId);
+
+            if (contentStore && overlay && bodyContainer) {
+                // Set the modal title based on the module requested
+                if (modalId === 'mod-balans-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'BALANS';
+                    titleAccent.className = 'text-brand-accent';
+                } else if (modalId === 'mod-magnum-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'MAGNUM';
+                    titleAccent.className = 'text-brand-blue';
+                } else if (modalId === 'mod-fare-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'FARE';
+                    titleAccent.className = 'text-brand-accent';
+                } else if (modalId === 'mod-amix-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'AMIX';
+                    titleAccent.className = 'text-purple-500';
+                } else if (modalId === 'mod-lacom-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'LACOM';
+                    titleAccent.className = 'text-brand-accent';
+                } else if (modalId === 'mod-parteneri-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'PARTENERI';
+                    titleAccent.className = 'text-brand-accent';
+                } else if (modalId === 'mod-lapro-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'LAPRO';
+                    titleAccent.className = 'text-brand-accent';
+                } else if (modalId === 'mod-persal-modal') {
+                    titleAccent.textContent = 'Modulul';
+                    titleText.textContent = 'PERSAL';
+                    titleAccent.className = 'text-brand-accent';
+                }
+
+                // Inject HTML Content
+                bodyContainer.innerHTML = contentStore.innerHTML;
+
+                // Show Container
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+
+                // Minimal delay to trigger CSS transitions after display:flex
+                setTimeout(() => {
+                    backdrop.classList.remove('opacity-0');
+                    backdrop.classList.add('opacity-100');
+
+                    content.classList.remove('opacity-0', 'scale-95');
+                    content.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            }
+        }
+
+        function closeErpModal() {
+            const overlay = document.getElementById('erp-modal-overlay');
+            const backdrop = document.getElementById('erp-modal-backdrop');
+            const content = document.getElementById('erp-modal-content');
+
+            if (overlay && backdrop && content) {
+                // Reverse transitions
+                backdrop.classList.remove('opacity-100');
+                backdrop.classList.add('opacity-0');
+
+                content.classList.remove('opacity-100', 'scale-100');
+                content.classList.add('opacity-0', 'scale-95');
+
+                // Wait for transition to complete before hiding container
+                setTimeout(() => {
+                    overlay.classList.remove('flex');
+                    overlay.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scroll
+                }, 300); // 300ms matches Tailwind's duration-300
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

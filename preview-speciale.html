@@ -1,0 +1,660 @@
+﻿<!DOCTYPE html>
+<html lang="ro" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintec Studio | Dezvoltare Aplicații Personalizate</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav sticky top-0 z-50 h-[80px] flex items-center">
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="preview-homepage-v6.html" class="logo-mark">
+                <span class="logo-symbol">S/</span>
+                <span class="logo-text">sintec</span>
+            </a>
+
+            <!-- Center nav -->
+            <div class="hidden lg:flex items-center gap-8 pl-12">
+                <a href="preview-homepage-v6.html" class="nav-link">Acasa</a>
+
+                <!-- Dropdown for Software -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 focus:outline-none">
+                        Software
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 bg-brand-navylight border border-brand-text/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <a href="preview-erp.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">Sistem
+                            ERP Integrat</a>
+                        <a href="preview-diasan.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">DIASAN
+                            (Medical)</a>
+                        <a href="preview-speciale.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors">Aplicații
+                            Personalizate</a>
+                    </div>
+                </div>
+
+                <a href="preview-servicii.html" class="nav-link">Servicii</a>
+                <a href="preview-clienti.html" class="nav-link">Clienti</a>
+                <a href="preview-desprenoi.html" class="nav-link">Despre Noi</a>
+                <a href="preview-contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Caută..."
+                        class="bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-2 rounded-full text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue w-64 placeholder-gray-500 transition-all">
+                    <svg class="w-4 h-4 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-text p-2 focus:outline-none z-50 relative">
+                    <svg class="w-6 h-6 menu-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="w-6 h-6 menu-close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-navy z-[45] hidden flex-col pt-24 px-6 opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="preview-homepage-v6.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Acasa</a>
+
+            <div class="border-b border-brand-text/10 pb-4">
+                <div class="text-brand-text font-medium mb-3">Software</div>
+                <div class="flex flex-col gap-3 pl-4 border-l-2 border-brand-accent/30">
+                    <a href="preview-erp.html" class="text-base text-brand-textlight hover:text-brand-text transition-colors">Sistem
+                        ERP Integrat</a>
+                    <a href="preview-diasan.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">DIASAN (Medical)</a>
+                    <a href="#" class="text-base text-brand-textlight hover:text-brand-text transition-colors">Aplicații
+                        Personalizate</a>
+                </div>
+            </div>
+            <a href="preview-servicii.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Servicii</a>
+            <a href="preview-clienti.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Clienti</a>
+            <a href="preview-desprenoi.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Despre
+                Noi</a>
+            <a href="#" class="text-brand-text font-medium pb-4 hover:text-brand-accent transition-colors">Contact</a>
+        </div>
+        <div class="mt-8 relative">
+            <input type="text" placeholder="Caută..."
+                class="w-full bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-3 rounded-xl text-base focus:outline-none focus:border-brand-blue placeholder-gray-500">
+            <svg class="w-5 h-5 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Secondary Sticky Navbar (ERP Specific) -->
+    <div class="sticky top-[80px] z-30 w-full bg-brand-navylight border-b border-brand-text/5 border-brand-text/10">
+        <div class="max-w-[1400px] mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-14 md:gap-8">
+                <div class="hidden md:flex items-center gap-2">
+                    <span class="text-xs font-mono text-brand-placeholder uppercase tracking-widest">Software /</span>
+                    <span class="text-brand-accent font-semibold text-sm">Aplicații Personalizate</span>
+                </div>
+                <!-- Sub nav links -->
+                <div
+                    class="flex flex-1 justify-between md:justify-end md:flex-none items-center w-full md:w-auto h-full gap-2 sm:gap-6 md:gap-8 overflow-hidden">
+                    <a href="#prezentare"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-text border-b-[3px] border-brand-accent h-full flex items-center text-center justify-center leading-[1.1]">Prezentare<br
+                            class="md:hidden"> generală</a>
+                    <a href="#module"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Module</a>
+                    <a href="#clienti"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Clienți</a>
+                    <a href="#faq"
+                        class="scrollspy-link text-[11px] sm:text-sm font-medium text-brand-textlight hover:text-brand-text transition-colors h-full flex items-center border-b-[3px] border-transparent text-center justify-center leading-[1.1]">Întrebări<br
+                            class="md:hidden"> frecvente</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact"
+                        class="bg-brand-text/10 hover:bg-brand-text/20 text-brand-text text-xs font-bold py-1.5 px-4 rounded-full transition-colors border border-brand-text/10 whitespace-nowrap">Solicită
+                        Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Dev Hero Section -->
+    <section
+        class="relative bg-brand-navy overflow-hidden min-h-[500px] lg:min-h-[550px] flex items-center pt-8 md:pt-0">
+        <!-- Angled Background Image Overlay -->
+        <div class="absolute top-0 right-0 w-full lg:w-[60%] h-full z-0 opacity-60 lg:opacity-100">
+            <div class="absolute inset-0 bg-cover bg-center hidden lg:block"
+                style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);">
+            </div>
+            <!-- Mobile alternative without clip path -->
+            <div class="absolute inset-0 bg-cover bg-center lg:hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');">
+            </div>
+            <!-- Gradient fades to blend the image into the dark background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand-navy/40 "></div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 w-full relative z-10 py-16">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block mb-4 text-brand-blue font-mono text-xs font-bold tracking-[0.2em] uppercase">Enterprise
+                    Software Engineering</span>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6 leading-[1.15]">
+                    Aplicații Custom și Outsourcing IT
+                </h1>
+                <p class="text-lg md:text-xl text-brand-textlight font-light mb-10 max-w-xl leading-relaxed">
+                    Transformă viziunea afacerii tale în realitate cu soluții software dedicate. Proiectăm baze de date
+                    complexe, platforme SaaS și aplicații Web/Mobile scalabile, construite exact pe nevoile companiei
+                    tale.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#contact"
+                        class="bg-brand-blue hover:bg-blue-600 text-brand-text font-bold py-3.5 px-8 rounded-full transition-transform hover:-translate-y-0.5 shadow-lg shadow-brand-blue/30 flex items-center gap-2">
+                        Contactează-ne pentru o evaluare
+                    </a>
+                    <a href="#module"
+                        class="bg-brand-text/5 hover:bg-brand-text/10 border border-brand-text/20 text-brand-text font-bold py-3.5 px-8 rounded-full transition-colors flex items-center gap-2">
+                        Descoperă serviciile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 1: Prezentare Generală (SAP Style Text/Video + Grid) -->
+    <section id="prezentare" class="py-24 bg-brand-navy relative z-10 reveal scroll-mt-24 border-t border-brand-text/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight max-w-4xl">
+                Transformă ideile inovatoare în produse software de înaltă performanță
+            </h2>
+            <p class="text-brand-textlight text-lg md:text-xl mb-16 max-w-3xl font-light">
+                Dezvoltăm la comandă aplicații sigure și scalabile bazându-ne pe o echipă multidisciplinară de arhitecți
+                și programatori seniori, pregătiți să rezolve orice provocare tehnică.
+            </p>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <!-- Video/Image placeholder left -->
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-text/10 aspect-video group cursor-pointer bg-brand-navylight">
+                    <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=2070&auto=format&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                        alt="Echipa de programatori IT">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                    </div>
+                </div>
+
+                <!-- Text lists right -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-6 font-display">Aplicațiile Custom te ajută:</h3>
+                    <ul class="space-y-4 text-brand-textlight font-light text-lg">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să digitalizezi procese unice care pur și simplu nu pot fi acoperite de soluții
+                                standard (off-the-shelf).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să modernizezi sistemele legacy (vechi) și să le migrezi în medii Enterprise Cloud
+                                moderne.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să consolidezi datele prin interfețe (API-uri) personalizate între zeci de ecosisteme
+                                IT fragmentate.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Să extinzi capacitatea echipei tale interne prin servicii sigure de IT Outsourcing
+                                B2B.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4 Column Benefits Grid bottom -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Arhitecturi Solide</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Punem accent puternic pe curățenia codului, scalabilitate la trafic intens și cele mai bune
+                        practici în industria de inginerie.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Metodologie Agile</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Livrăm produsele în mod iterativ, transparent. Adaptăm continuu etapele de dezvoltare
+                        (sprint-urile) la feedback-ul vital al utilizatorilor de test.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Securitate by Design</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Integram protocoale de securitate extinse încă de la primele linii de cod (encryption, identity
+                        handling, firewall rules).
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-brand-text mb-3 font-display">Suport pe Termen Lung</h4>
+                    <p class="text-brand-textlight text-sm font-light leading-relaxed">
+                        Implementarea e doar începutul. Oferim Contracte de Suport (Service Level Agreements - SLA)
+                        pentru stabilitate și asistență a afacerii pe viitor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 2: Module (Interactive Tabs) -->
+    <section id="module" class="py-24 relative z-10 reveal scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Expertiză și Servicii Custom
+                </h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Acoperim întregul ciclu de viață al produselor software, de la faza incipientă de analiză a
+                    cerințelor de afaceri, până la lansarea globală și managementul actualizărilor.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-10">
+                <!-- Tabs List -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button
+                        class="module-tab active text-center px-6 py-3 rounded-full border border-brand-text/10 bg-brand-text/5 hover:bg-brand-text/10 text-brand-text font-medium transition-all"
+                        data-target="mod-audit">
+                        Audit Tehnic & Soluții
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-web">
+                        Dezvoltare Web / Cloud
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-mobile">
+                        Aplicații Mobile Dediate
+                    </button>
+                    <button
+                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all"
+                        data-target="mod-api">
+                        Integrări și API-uri Interne
+                    </button>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="w-full grid mt-6">
+                    <!-- Audit -->
+                    <div id="mod-audit"
+                        class="module-content active row-start-1 col-start-1 opacity-100 transition-opacity duration-500 z-10">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Consultanta IT">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Analiză Business & UI/UX
+                                    Design</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Mapăm fluxurile operaționale existente direct într-o arhitectură digitală.
+                                    Identificăm riscurile majore și creăm scheme complexe (wireframes, prototipuri)
+                                    pentru a aproba investițiile cu risc zero.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Generare Caiete de Sarcini (BRD) precise</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Design vizual (UI/UX) prietenos pentru retenția userilor</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Web / Cloud -->
+                    <div id="mod-web"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Web Development Coding">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Dezvoltare Web & SaaS</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Creăm sisteme complexe ce pot rula nativ în browsere fără necesitatea vreunei
+                                    instalări (SaaS - Software as a Service). Panouri interne de administrare, ERP-uri
+                                    light sau CRM-uri ultra-specializate.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Tehnologii actualizate: React, Angular, Node.js, Next</a></span>
+                                    </li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Deploy scalabil în AWS Cloud, Microsoft Azure sau servere private
+                                            On-Premise</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile -->
+                    <div id="mod-mobile"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1974&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Mobile App Development">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Aplicații iOS & Android</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    Pachete de utilitate direct în mâinile angajaților din teren (logistică de
+                                    distribuție, curierat, citire contoare pe teren). Dezvoltăm aplicații mobile
+                                    performante și intuitive, capabile să ruleze Offline-First.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Funcționalități avansate: Bluetooth IoT, NFC, GPS Tracking, Scanner
+                                            inventar</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Publicarea finală în platformele AppStore (Apple) și Google
+                                            Play</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Integrari -->
+                    <div id="mod-api"
+                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div
+                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop"
+                                    class="w-full h-full object-cover opacity-80" alt="Server Backend Integration">
+                            </div>
+                            <div class="flex flex-col justify-center py-4 md:py-0">
+                                <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Integrări IT & Automatizări
+                                    API</h3>
+                                <p class="text-brand-textlight font-light leading-relaxed mb-6">
+                                    O organizație eficientă nu are date izolate (data silos). Creăm punți de legătură
+                                    (Microservicii) prin care echipamentele fizice din fabrici sau diferite programe
+                                    terțe contabile pot trimite și citi informații fără intervenție umană.
+                                </p>
+                                <ul class="space-y-4 text-sm text-brand-textlight">
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Sincronizări bi-direcționale pentru module e-Commerce, Bănci (POS),
+                                            Curieri</span></li>
+                                    <li class="flex items-start gap-4"><svg
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg> <span>Arhitecturi moderne Event-Driven pentru actualizări în masă
+                                            (WebSockets, RabbitMQ)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Marquee Section (Re-Added) -->
+    <section id="clienti" class="marquee-container reveal scroll-mt-24 pb-20 pt-10 overflow-hidden">
+        <div class="text-center mb-10">
+            <h2 class="font-display text-3xl font-bold text-brand-text mb-4">Organizații care au încredere în SINTEC</h2>
+            <p class="text-sm font-mono text-brand-textlight uppercase tracking-widest font-semibold">Tehnologie de top
+                în România</p>
+        </div>
+        <!-- We duplicate the content to create a seamless loop. The total width must be animated by 50% -->
+        <div class="marquee-content">
+            <!-- First Set -->
+            <div class="marquee-item"><span class="marquee-text-logo">Consilii Județene</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">DAGSPC</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">AJPIS Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Clinica Nova</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Aeroportul Internațional Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Recuperare Borșa</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">EATON</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Sto Romania</span></div>
+
+            <!-- Second Set (Duplicate for seamless loop) -->
+            <div class="marquee-item"><span class="marquee-text-logo">Consilii Județene</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">DAGSPC</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">AJPIS Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Clinica Nova</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Aeroportul Internațional Maramureș</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Spitalul de Recuperare Borșa</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">EATON</span></div>
+            <div class="marquee-item"><span class="marquee-text-logo">Sto Romania</span></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1000px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Întrebări Frecvente</h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Află cum platforma noastră se poate adapta cerințelor specifice de business.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Cum funcționează etapa inițială de
+                            consultanță IT?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Oferim o etapă distinctă de analiză (Discovery Phase) în care documentăm în detaliu
+                            cerințele viitoarei aplicații, construim arhitectura bazei de date și realizăm un buget
+                            realist și predictibil. Astfel, nu te angajezi la codare până nu ai un plan solid.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Ce se întâmplă cu codul sursă după
+                            finalizare?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Ca standard în contractele noastre B2B, transmitem integral codul sursă, drepturile de
+                            proprietate intelectuală și documentația tehnică a platformei către compania dumneavoastră,
+                            fără taxe ascunse sau licențe per-utilizator.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Asigurați suport pentru mentenanță și
+                            extindere post-lansare?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Absolut. Propunem un Contract de Suport (SLA) personalizat care garantează timpi de răspuns
+                            rapizi, monitorizarea infrastructurii Cloud 24/7 și implementarea unor noi module conform
+                            noilor priorități ale afacerii.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Puteți garanta viteza pe volume mari de
+                            date sau trafic?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Da. Echipa noastră proiectează aplicații scalabile bazate pe arhitecturi orizontale moderne
+                            (Load Balancing, Microservices) ce susțin trafic intens, ideale pentru platforme
+                            guvernamentale sau portaluri e-Commerce internaționale.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Full Width Banner -->
+    <!-- CTA Banner Split Layout -->
+    <section class="relative bg-brand-navylight flex flex-col lg:flex-row min-h-[500px] overflow-hidden reveal border-t border-brand-text/5">
+        <!-- Left Side Image -->
+        <div class="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
+            <div class="banner-diagonal-img-speciale !relative w-full h-full min-h-[300px]"></div>
+            <!-- Overlay to darken the image slightly for aesthetic purposes -->
+            <div class="absolute inset-0 bg-brand-navy/20"></div>
+            <!-- Vertical Divider Line (Visible on Desktop) -->
+            <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-brand-accent/30 z-10"></div>
+        </div>
+        
+        <!-- Right Side Content -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-12 lg:p-24 relative">
+            <!-- Subtle background glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-text/[0.02] to-transparent pointer-events-none"></div>
+            
+            <div class="max-w-xl w-full relative z-10">
+                <span class="inline-block mb-4 text-brand-accent font-mono text-sm font-bold tracking-[0.2em] uppercase">Hai să colaborăm</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
+                    Transformăm orice idee ambițioasă în realitate.
+                </h2>
+                <p class="text-xl text-brand-textlight font-light mb-10 leading-relaxed border-l-2 border-brand-accent/30 pl-6">
+                    Scrie-ne o scurtă descriere a cerințelor proiectului tău, iar experții SINTEC vor reveni rapid cu o
+                    soluție arhitecturală și o estimare de timp realistă.
+                </p>
+                <a href="#contact"
+                    class="inline-flex items-center justify-center px-8 py-4 text-brand-navy bg-brand-accent hover:bg-brand-accentdark font-bold rounded-full transition-all duration-300 gap-3 group shadow-[0_0_20px_rgba(228,226,112,0.3)] hover:shadow-none hover:-translate-y-1">
+                    Trimite detaliile proiectului tău
+                    <svg class="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area CTA -->
+    <script src="footer.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

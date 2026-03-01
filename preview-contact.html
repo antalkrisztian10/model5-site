@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="ro" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintec Studio | Contact</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav sticky top-0 z-50 h-[80px] flex items-center">
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="preview-homepage-v6.html" class="logo-mark">
+                <span class="logo-symbol">S/</span>
+                <span class="logo-text">sintec</span>
+            </a>
+
+            <!-- Center nav -->
+            <div class="hidden lg:flex items-center gap-8 pl-12">
+                <a href="preview-homepage-v6.html" class="nav-link">Acasa</a>
+
+                <!-- Dropdown for Software -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 focus:outline-none">
+                        Software
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 bg-brand-navylight border border-brand-text/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <a href="preview-erp.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">Sistem
+                            ERP Integrat</a>
+                        <a href="preview-diasan.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">DIASAN
+                            (Medical)</a>
+                        <a href="preview-speciale.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors">Aplicații
+                            Personalizate</a>
+                    </div>
+                </div>
+
+                <a href="preview-servicii.html" class="nav-link">Servicii</a>
+                <a href="preview-clienti.html" class="nav-link">Clienti</a>
+                <a href="preview-desprenoi.html" class="nav-link">Despre Noi</a>
+                <a href="preview-contact.html"
+                    class="nav-link text-brand-text font-medium border-b-2 border-brand-accent pb-1">Contact</a>
+            </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Caută..."
+                        class="bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-2 rounded-full text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue w-64 placeholder-gray-500 transition-all">
+                    <svg class="w-4 h-4 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-text p-2 focus:outline-none z-50 relative">
+                    <svg class="w-6 h-6 menu-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="w-6 h-6 menu-close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-navy z-[45] hidden flex-col pt-24 px-6 opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="preview-homepage-v6.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Acasa</a>
+
+            <div class="border-b border-brand-text/10 pb-4">
+                <div class="text-brand-text font-medium mb-3">Software</div>
+                <div class="flex flex-col gap-3 pl-4 border-l-2 border-brand-accent/30">
+                    <a href="preview-erp.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Sistem
+                        ERP Integrat</a>
+                    <a href="preview-diasan.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">DIASAN
+                        (Medical)</a>
+                    <a href="preview-speciale.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Aplicații
+                        Personalizate</a>
+                </div>
+            </div>
+            <a href="preview-servicii.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Servicii</a>
+            <a href="preview-clienti.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Clienti</a>
+            <a href="preview-desprenoi.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Despre
+                Noi</a>
+            <a href="preview-contact.html" class="text-brand-accent font-medium pb-4 transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section
+        class="relative bg-brand-navy overflow-hidden min-h-[500px] lg:min-h-[550px] flex items-center pt-24 md:pt-32 pb-16 border-b border-brand-text/10">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Contact Sintec Support" class="w-full h-full object-cover opacity-50" />
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 w-full relative z-10 text-center flex flex-col items-center">
+            <span
+                class="inline-block mb-4 text-brand-accent font-mono text-sm font-bold tracking-[0.2em] uppercase reveal">Lucreaza
+                cu Noi</span>
+            <h1 class="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-brand-text mb-6 leading-[1.15] max-w-4xl reveal"
+                style="transition-delay: 100ms;">
+                Suntem aici pentru <br class="hidden lg:block" />a-ți răspunde
+            </h1>
+            <p class="text-lg md:text-xl text-brand-textlight font-light max-w-2xl leading-relaxed reveal"
+                style="transition-delay: 200ms;">
+                Indiferent dacă ai nevoie de suport tehnic, o ofertă personalizată sau vrei să afli mai multe despre
+                platformele noastre, echipa Sintec îți stă la dispoziție.
+            </p>
+        </div>
+    </section>
+
+    <!-- Split Contact Section -->
+    <section class="py-24 bg-brand-navy relative z-10 overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+
+                <!-- LEFT SIDE: Contact Information -->
+                <div class="lg:col-span-5 reveal">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-brand-text mb-4">Hai să discutăm despre
+                        proiectul tău</h2>
+                    <p class="text-brand-textlight font-light text-lg mb-12">
+                        Completează formularul alăturat sau folosește informațiile de contact de mai jos pentru a lua
+                        legătura direct cu consultanții noștri.
+                    </p>
+
+                    <div class="relative mt-8 lg:mt-16 space-y-6">
+                        <div
+                            class="hidden lg:block absolute left-[31px] top-12 bottom-12 w-0.5 bg-gradient-to-b from-brand-accent via-brand-blue to-purple-500 opacity-20">
+                        </div>
+
+                        <!-- Location -->
+                        <div class="relative group z-10">
+                            <div
+                                class="absolute -inset-[2px] bg-gradient-to-r from-brand-accent to-brand-blue rounded-[1.5rem] opacity-0 group-hover:opacity-100 transition duration-700 blur-[6px]">
+                            </div>
+                            <div
+                                class="relative flex items-center lg:items-start gap-5 p-6 md:p-8 rounded-[1.5rem] bg-brand-navylight/90 backdrop-blur-md border border-brand-text/10 overflow-hidden transform group-hover:-translate-y-1 transition-transform duration-500">
+                                <div
+                                    class="absolute -right-8 -top-8 w-32 h-32 bg-brand-accent/10 rounded-full blur-[40px] group-hover:bg-brand-accent/20 transition-all duration-700">
+                                </div>
+                                <div class="flex-shrink-0 relative">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-navy to-brand-navylight border border-brand-accent/30 flex items-center justify-center text-brand-accent shadow-[0_0_20px_rgba(0,229,255,0.15)] group-hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] transition-all duration-300">
+                                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 pt-1">
+                                    <h4
+                                        class="text-brand-text font-display font-bold mb-2 text-xl tracking-wide group-hover:text-brand-accent transition-colors duration-300">
+                                        Sediul Central</h4>
+                                    <p class="text-brand-textlight font-light text-base leading-relaxed">
+                                        Strada Victoriei Nr 148A<br />
+                                        Baia Mare, România
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="relative group z-10">
+                            <div
+                                class="absolute -inset-[2px] bg-gradient-to-r from-brand-blue to-purple-500 rounded-[1.5rem] opacity-0 group-hover:opacity-100 transition duration-700 blur-[6px]">
+                            </div>
+                            <div
+                                class="relative flex items-center lg:items-start gap-5 p-6 md:p-8 rounded-[1.5rem] bg-brand-navylight/90 backdrop-blur-md border border-brand-text/10 overflow-hidden transform group-hover:-translate-y-1 transition-transform duration-500">
+                                <div
+                                    class="absolute -right-8 -top-8 w-32 h-32 bg-brand-blue/10 rounded-full blur-[40px] group-hover:bg-brand-blue/20 transition-all duration-700">
+                                </div>
+                                <div class="flex-shrink-0 relative">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-navy to-brand-navylight border border-brand-blue/30 flex items-center justify-center text-brand-blue shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300">
+                                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 pt-1">
+                                    <h4
+                                        class="text-brand-text font-display font-bold mb-2 text-xl tracking-wide group-hover:text-brand-blue transition-colors duration-300">
+                                        Contact Telefonic</h4>
+                                    <p class="text-brand-textlight font-light text-base leading-relaxed">
+                                        <a href="tel:+40262222333"
+                                            class="hover:text-brand-text transition-colors block text-lg font-medium">+40
+                                            262
+                                            222 333</a>
+                                        <span
+                                            class="text-xs uppercase tracking-wider opacity-60 font-mono mt-1 block">Luni
+                                            - Vineri: 08:00 - 17:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="relative group z-10">
+                            <div
+                                class="absolute -inset-[2px] bg-gradient-to-r from-purple-500 to-pink-500 rounded-[1.5rem] opacity-0 group-hover:opacity-100 transition duration-700 blur-[6px]">
+                            </div>
+                            <div
+                                class="relative flex items-center lg:items-start gap-5 p-6 md:p-8 rounded-[1.5rem] bg-brand-navylight/90 backdrop-blur-md border border-brand-text/10 overflow-hidden transform group-hover:-translate-y-1 transition-transform duration-500">
+                                <div
+                                    class="absolute -right-8 -top-8 w-32 h-32 bg-purple-500/10 rounded-full blur-[40px] group-hover:bg-purple-500/20 transition-all duration-700">
+                                </div>
+                                <div class="flex-shrink-0 relative">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-navy to-brand-navylight border border-purple-500/30 flex items-center justify-center text-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.15)] group-hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300">
+                                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="relative z-10 pt-1">
+                                    <h4
+                                        class="text-brand-text font-display font-bold mb-2 text-xl tracking-wide group-hover:text-purple-400 transition-colors duration-300">
+                                        Email & Suport</h4>
+                                    <p
+                                        class="text-brand-textlight font-light text-base leading-relaxed flex flex-col gap-1">
+                                        <a href="mailto:office@sintec.ro"
+                                            class="hover:text-brand-text transition-colors flex items-center gap-2"><span
+                                                class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                                            office@sintec.ro</a>
+                                        <a href="mailto:suport@sintec.ro"
+                                            class="hover:text-brand-text transition-colors flex items-center gap-2"><span
+                                                class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                                            suport@sintec.ro</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE: Contact Form -->
+                <div class="lg:col-span-7 reveal" style="transition-delay: 200ms;">
+                    <div
+                        class="bg-brand-navylight border border-brand-text/10 p-8 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue via-brand-accent to-purple-500 opacity-80">
+                        </div>
+
+                        <form action="#" method="POST" class="space-y-6 relative z-10">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="nume" class="block text-sm font-medium text-brand-textlight mb-2">Nume
+                                        complet
+                                        *</label>
+                                    <input type="text" id="nume" name="nume" placeholder="Ion Popescu"
+                                        class="form-input" required>
+                                </div>
+                                <div>
+                                    <label for="telefon"
+                                        class="block text-sm font-medium text-brand-textlight mb-2">Telefon
+                                        *</label>
+                                    <input type="tel" id="telefon" name="telefon" placeholder="+40 700 000 000"
+                                        class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="companie"
+                                        class="block text-sm font-medium text-brand-textlight mb-2">Instituția/Compania
+                                        *</label>
+                                    <input type="text" id="companie" name="companie" placeholder="Numele organizației"
+                                        class="form-input" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-brand-textlight mb-2">Email
+                                        *</label>
+                                    <input type="email" id="email" name="email" placeholder="adresa@exemplu.ro"
+                                        class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subiect" class="block text-sm font-medium text-brand-textlight mb-2">Subiect
+                                    *</label>
+                                <select id="subiect" name="subiect" class="form-input cursor-pointer" required>
+                                    <option value="" disabled selected>Selectează un subiect</option>
+                                    <option value="oferta">Cerere de Ofertă Software</option>
+                                    <option value="suport">Suport Tehnic / Mentenanță</option>
+                                    <option value="partnership">Parteneriate B2B</option>
+                                    <option value="angajare">Carieră / Resurse Umane</option>
+                                    <option value="altele">Altele</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="mesaj" class="block text-sm font-medium text-brand-textlight mb-2">Mesaj
+                                    *</label>
+                                <textarea id="mesaj" name="mesaj" rows="5" placeholder="Cum vă putem ajuta?"
+                                    class="form-input resize-y" required></textarea>
+                            </div>
+
+                            <div class="flex items-start gap-3 py-2">
+                                <div class="flex items-center h-5 mt-0.5">
+                                    <input id="gdpr" name="gdpr" type="checkbox" required
+                                        class="w-4 h-4 rounded border-gray-600 bg-brand-text/5 text-brand-accent focus:ring-brand-accent focus:ring-offset-gray-900 focus:ring-2 cursor-pointer transition-all">
+                                </div>
+                                <label for="gdpr" class="text-sm text-brand-textlight font-light cursor-pointer">
+                                    Sunt de acord cu prelucrarea datelor mele personale conform <a href="#"
+                                        class="text-brand-accent hover:underline">Politicii de Confidențialitate</a>.
+                                </label>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" class="w-full btn-cyan py-4 text-lg justify-center">
+                                    Trimite Mesajul
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section
+        class="relative h-[600px] lg:h-[700px] w-full bg-brand-navy border-t border-brand-text/5 overflow-hidden reveal">
+        <div class="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_150px_rgba(15,23,42,1)]"></div>
+        <div
+            class="absolute inset-x-0 bottom-0 h-32 z-10 pointer-events-none bg-gradient-to-t from-brand-dark to-transparent">
+        </div>
+
+        <div class="absolute inset-0 z-0 mega-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.9576880053916!2d23.5615701!3d47.6534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4736f8a42aa7af0b%3A0xc660d2bafa7acc15!2sStrada%20Victoriei%20148A%2C%20Baia%20Mare%20430071%2C%20Rom%C3%A2nia!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0 z-20">
+            <div
+                class="bg-brand-navylight/90 backdrop-blur-md border border-brand-text/20 p-6 rounded-2xl shadow-2xl flex items-center gap-4 group cursor-pointer hover:bg-brand-navylight transition-colors">
+                <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center animate-pulse">
+                    <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-brand-text font-display font-bold">Ne găsești aici</h4>
+                    <p class="text-brand-textlight font-light text-sm">Strada Victoriei Nr 148A</p>
+                </div>
+                <div
+                    class="pl-4 border-l border-brand-text/10 opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+                    <svg class="w-5 h-5 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer placeholder (populated by footer.js) -->
+    <div id="footer-placeholder"></div>
+
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html>
+<html lang="ro" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintec Studio | Servicii IT Profesionale</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav sticky top-0 z-50 h-[80px] flex items-center">
+        <div class="w-full max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="preview-homepage-v6.html" class="logo-mark">
+                <span class="logo-symbol">S/</span>
+                <span class="logo-text">sintec</span>
+            </a>
+
+            <!-- Center nav -->
+            <div class="hidden lg:flex items-center gap-8 pl-12">
+                <a href="preview-homepage-v6.html" class="nav-link">Acasa</a>
+
+                <!-- Dropdown for Software -->
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 focus:outline-none">
+                        Software
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-56 bg-brand-navylight border border-brand-text/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <a href="preview-erp.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">Sistem
+                            ERP Integrat</a>
+                        <a href="preview-diasan.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors border-b border-brand-text/5">DIASAN
+                            (Medical)</a>
+                        <a href="preview-speciale.html"
+                            class="block px-4 py-3 text-sm text-brand-text hover:bg-brand-text/5 hover:text-brand-accent transition-colors">Aplicații
+                            Personalizate</a>
+                    </div>
+                </div>
+
+                <a href="preview-servicii.html"
+                    class="nav-link text-brand-text font-medium border-b-2 border-brand-accent pb-1">Servicii</a>
+                <a href="preview-clienti.html" class="nav-link">Clienti</a>
+                <a href="preview-desprenoi.html" class="nav-link">Despre Noi</a>
+                <a href="preview-contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Caută..."
+                        class="bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-2 rounded-full text-sm focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue w-64 placeholder-gray-500 transition-all">
+                    <svg class="w-4 h-4 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-text p-2 focus:outline-none z-50 relative">
+                    <svg class="w-6 h-6 menu-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="w-6 h-6 menu-close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-navy z-[45] hidden flex-col pt-24 px-6 opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col gap-6 text-xl">
+            <a href="preview-homepage-v6.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Acasa</a>
+
+            <div class="border-b border-brand-text/10 pb-4">
+                <div class="text-brand-text font-medium mb-3">Software</div>
+                <div class="flex flex-col gap-3 pl-4 border-l-2 border-brand-accent/30">
+                    <a href="preview-erp.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Sistem
+                        ERP Integrat</a>
+                    <a href="preview-diasan.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">DIASAN
+                        (Medical)</a>
+                    <a href="preview-speciale.html"
+                        class="text-base text-brand-textlight hover:text-brand-text transition-colors">Aplicații
+                        Personalizate</a>
+                </div>
+            </div>
+            <a href="preview-servicii.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Servicii</a>
+            <a href="preview-clienti.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Clienti</a>
+            <a href="preview-desprenoi.html"
+                class="text-brand-text font-medium border-b border-brand-text/10 pb-4 hover:text-brand-accent transition-colors">Despre
+                Noi</a>
+            <a href="preview-contact.html"
+                class="text-brand-text font-medium pb-4 hover:text-brand-accent transition-colors">Contact</a>
+        </div>
+        <div class="mt-8 relative">
+            <input type="text" placeholder="Caută..."
+                class="w-full bg-brand-text/5 border border-brand-text/10 text-brand-text pl-4 pr-10 py-3 rounded-xl text-base focus:outline-none focus:border-brand-blue placeholder-gray-500">
+            <svg class="w-5 h-5 text-brand-placeholder absolute right-4 top-1/2 -translate-y-1/2" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Services Hero Section -->
+    <section
+        class="relative bg-brand-navy overflow-hidden min-h-[500px] lg:min-h-[550px] flex items-center pt-8 md:pt-0">
+        <!-- Angled Background Image Overlay -->
+        <div class="absolute top-0 right-0 w-full lg:w-[80%] h-full z-0 opacity-80 lg:opacity-100">
+            <div class="absolute inset-0 bg-cover bg-center hidden lg:block"
+                style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);">
+            </div>
+            <!-- Mobile alternative without clip path -->
+            <div class="absolute inset-0 bg-cover bg-center lg:hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            </div>
+            <!-- Gradient fades to blend the image into the dark background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand-navy/10 "></div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 w-full relative z-10 py-16">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block mb-4 text-brand-accent font-mono text-xs font-bold tracking-[0.2em] uppercase">Parteneriat
+                    Strategic</span>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6 leading-[1.15]">
+                    Servicii IT <br />Profesionale
+                </h1>
+                <p class="text-lg md:text-xl text-brand-textlight font-light mb-10 max-w-xl leading-relaxed">
+                    De la consultanță tehnică de specialitate, la implementare și suport continuu. Îți acoperim
+                    întregul necesar tehnologic printr-o abordare end-to-end.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#servicii"
+                        class="bg-brand-blue hover:bg-blue-600 text-brand-text font-bold py-3.5 px-8 rounded-full transition-transform hover:-translate-y-0.5 shadow-lg shadow-brand-blue/30 flex items-center gap-2">
+                        Vezi Serviciile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="servicii">
+        <!-- 1. Implementare -->
+        <section id="implementare"
+            class="py-24 bg-brand-navy relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div
+                        class="relative group aspect-square lg:aspect-auto lg:h-[500px] flex items-center justify-center">
+                        <!-- Background Blob -->
+                        <div class="bg-blob bg-brand-blue w-[120%] h-[120%] top-[-10%] left-[-10%]"></div>
+                        <!-- Dots Background -->
+                        <div class="absolute inset-0 bg-dots opacity-20 blob-shape-3"></div>
+                        <!-- Main Image in Blob -->
+                        <div class="relative blob-shape shadow-2xl w-[90%] h-[90%] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                alt="Implementare Software">
+                            <div class="absolute inset-0 bg-brand-navy/10 "></div>
+                        </div>
+                        <!-- Badge/Overlap Element -->
+                    </div>
+                    <div>
+                        <span
+                            class="text-brand-accent font-mono text-xs font-bold tracking-[0.2em] uppercase mb-4 inline-block">01.
+                            Abordare tehnică</span>
+                        <h2 class="font-display text-4xl font-bold text-brand-text mb-6">Implementare Software</h2>
+                        <p class="text-brand-textlight font-light text-lg leading-relaxed mb-8">
+                            Transformăm o decizie de business într-o realitate operațională. Echipa noastră de experți
+                            gestionează întregul proces de implementare, asigurându-se că sistemul software se pliază
+                            perfect pe arhitectura afacerii tale. Minimizăm timpul de nefuncționare și ne asigurăm că
+                            tranziția de la vechile metode de lucru este lină, sigură și complet transparentă pentru
+                            activitatea ta zilnică.
+                        </p>
+                        <ul class="space-y-4 text-sm text-brand-textlight">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Analiză detaliată și mapare exactă pe fluxurile tale interne de lucru.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Migrarea securizată și integră a datelor istorice din sistemele vechi.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Instruire -->
+        <section id="instruire"
+            class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <span
+                            class="text-brand-blue font-mono text-xs font-bold tracking-[0.2em] uppercase mb-4 inline-block">02.
+                            Transfer de cunoștințe</span>
+                        <h2 class="font-display text-4xl font-bold text-brand-text mb-6">Instruirea Personalului</h2>
+                        <p class="text-brand-textlight font-light text-lg leading-relaxed mb-8">
+                            Oricât de performant ar fi un soft, succesul său depinde de oamenii care îl folosesc zilnic.
+                            De aceea, la SINTEC, nu lăsăm echipa ta să se descurce singură. Organizăm sesiuni de
+                            training aplicate, specifice pentru fiecare departament (financiar, HR, medical, producție),
+                            astfel încât toți utilizatorii să stăpânească noile instrumente și să atingă productivitate
+                            maximă încă din prima zi.
+                        </p>
+                        <ul class="space-y-4 text-sm text-brand-textlight">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Furnizare de manuale de utilizare și documentație tehnică detaliată.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Asistență directă și suport intensificat în primele zile de utilizare
+                                    reală.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="order-1 lg:order-2 relative group aspect-square lg:aspect-auto lg:h-[500px] flex items-center justify-center">
+                        <div class="bg-blob bg-brand-accent w-[110%] h-[110%] top-[0%] left-[-5%]"></div>
+                        <div class="absolute inset-0 bg-dots opacity-20 blob-shape"></div>
+                        <!-- Main Image in Blob -->
+                        <div class="relative blob-shape-2 shadow-2xl w-[85%] h-[85%] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                alt="Instruire Personal">
+                            <div class="absolute inset-0 bg-brand-card/30 "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Suport Tehnic -->
+        <section id="suport" class="py-24 bg-brand-navy relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div
+                        class="relative group aspect-square lg:aspect-auto lg:h-[500px] flex items-center justify-center transform transition-transform duration-700">
+                        <div class="bg-blob bg-brand-blue/50 w-[130%] h-[130%] top-[-15%] right-[-15%]"
+                            style="animation-delay: -5s;"></div>
+                        <div class="absolute inset-0 bg-dots opacity-20 blob-shape-2"
+                            style="animation-direction: reverse;"></div>
+                        <!-- Main Image in Blob -->
+                        <div class="relative blob-shape-3 shadow-2xl w-[90%] h-[80%] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 scale-110"
+                                alt="Suport Tehnic">
+                            <div class="absolute inset-0 bg-brand-navy/10 "></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="text-brand-accent font-mono text-xs font-bold tracking-[0.2em] uppercase mb-4 inline-block">03.
+                            Helpdesk</span>
+                        <h2 class="font-display text-4xl font-bold text-brand-text mb-6">Suport Tehnic</h2>
+                        <p class="text-brand-textlight font-light text-lg leading-relaxed mb-8">
+                            Afacerea sau unitatea ta medicală nu își permite întreruperi. Ai la dispoziție o echipă
+                            internă dedicată de suport tehnic, gata să intervină rapid și eficient la orice solicitare.
+                            Prin telefon, email sau asistență remote securizată, diagnosticăm și rezolvăm incidentele
+                            tehnice în cel mai scurt timp, garantând stabilitatea și continuitatea operațiunilor tale
+                            critice.
+                        </p>
+                        <ul class="space-y-4 text-sm text-brand-textlight">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Asistență tehnică promptă prin remote desktop și linii telefonice dedicate.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Monitorizare proactivă a sistemelor pentru a preveni incidentele înainte ca ele să
+                                    apară.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Mentenanta -->
+        <section id="mentenanta"
+            class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <span
+                            class="text-brand-blue font-mono text-xs font-bold tracking-[0.2em] uppercase mb-4 inline-block">04.
+                            Sustenabilitate</span>
+                        <h2 class="font-display text-4xl font-bold text-brand-text mb-6">Mentenanță și Actualizări</h2>
+                        <p class="text-brand-textlight font-light text-lg leading-relaxed mb-8">
+                            Mediul de afaceri și normele legale din România sunt în continuă schimbare. La SINTEC, ne
+                            asigurăm că softul tău nu rămâne niciodată în urmă. Oferim servicii complete de mentenanță
+                            evolutivă, integrând prompt noile cerințe legislative (e-Factura, e-Transport, SAF-T,
+                            raportări DRG) și lansăm constant upgrade-uri tehnologice pentru ca sistemul tău să
+                            performeze impecabil ani la rând.
+                        </p>
+                        <ul class="space-y-4 text-sm text-brand-textlight">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Actualizări legislative rapide și garantate, integrate direct în modulele
+                                    tale.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Patch-uri de securitate lunare și optimizări constante ale codului sursă.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Dezvoltarea de noi funcționalități la cerere, pe măsură ce afacerea ta se
+                                    extinde.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="order-1 lg:order-2 relative group aspect-square lg:aspect-auto lg:h-[500px] flex items-center justify-center transform transition-transform duration-700">
+                        <div class="bg-blob bg-brand-accent w-[140%] h-[140%] top-[0%] left-[-20%]"
+                            style="animation-duration: 20s;"></div>
+                        <div class="absolute inset-0 bg-dots opacity-20 blob-shape-3"></div>
+                        <!-- Main Image in Blob -->
+                        <div class="relative blob-shape shadow-2xl w-[85%] h-[85%] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1620843002805-05a08cb72f57?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                alt="Mentenanta Servere">
+                            <div class="absolute inset-0 bg-brand-card/30 "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Consultanta -->
+        <section id="consultanta"
+            class="py-24 bg-brand-navy relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div
+                        class="relative group aspect-square lg:aspect-auto lg:h-[500px] flex items-center justify-center">
+                        <div class="bg-blob bg-brand-blue w-[110%] h-[110%] top-[-10%] right-[-10%]"
+                            style="animation-delay: -2s;"></div>
+                        <div class="absolute inset-0 bg-dots opacity-20 blob-shape-2"></div>
+                        <!-- Main Image in Blob -->
+                        <div class="relative blob-shape-3 shadow-2xl w-[90%] h-[90%] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                alt="Consultanta de Business">
+                            <div class="absolute inset-0 bg-brand-navy/10 "></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="text-brand-accent font-mono text-xs font-bold tracking-[0.2em] uppercase mb-4 inline-block">05.
+                            Soluții la Comandă</span>
+                        <h2 class="font-display text-4xl font-bold text-brand-text mb-6">Dezvoltare Software
+                            Personalizat
+                        </h2>
+                        <p class="text-brand-textlight font-light text-lg leading-relaxed mb-8">
+                            Când modulele standard nu acoperă în totalitate specificul afacerii tale, echipa noastră de
+                            programatori preia inițiativa. Construim aplicații și extensii software de la zero, perfect
+                            adaptate fluxurilor tale unice de lucru. De la gestiunea unor industrii de nișă, până la
+                            automatizări atipice, transformăm nevoile tale într-un cod stabil și funcțional.
+                        </p>
+                        <ul class="space-y-4 text-sm text-brand-textlight">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Arhitectură software flexibilă, construită exact pe cerințele afacerii
+                                    tale.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Dezvoltarea de module adiționale care se integrează nativ cu sistemele de
+                                    bază.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Soluții dedicate pentru industrii specifice</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Administrare DB -->
+        <section id="expertiza"
+            class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <span
+                            class="text-brand-blue font-mono text-xs font-bold tracking-[0.2em] uppercase mb-4 inline-block">06.
+                            Infrastructură Critică</span>
+                        <h2 class="font-display text-4xl font-bold text-brand-text mb-6">Administrare Baze de Date</h2>
+                        <p class="text-brand-textlight font-light text-lg leading-relaxed mb-8">
+                            Datele reprezintă cel mai valoros și sensibil activ al organizației tale. Oferim expertiză
+                            avansată în administrarea bazelor de date relaționale, asigurând integritatea, viteza și
+                            disponibilitatea informațiilor 24/7. Implementăm politici stricte de protecție, optimizăm
+                            interogările pentru baze de date cu milioane de înregistrări și creăm o infrastructură
+                            solidă în fața pierderilor de date.
+                        </p>
+                        <ul class="space-y-4 text-sm text-brand-textlight">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Managementul securizat și mentenanța instanțelor SQL</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Implementarea soluțiilor de Backup automatizat și protocoale stricte de Disaster
+                                    Recovery.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="order-1 lg:order-2 relative group aspect-square lg:aspect-auto lg:h-[500px] flex items-center justify-center">
+                        <div class="bg-blob bg-brand-accent w-[120%] h-[120%] top-[-10%] right-[0%]"
+                            style="animation-duration: 25s;"></div>
+                        <div class="absolute inset-0 bg-dots opacity-20 blob-shape"></div>
+                        <!-- Main Image in Blob -->
+                        <div class="relative blob-shape-2 shadow-2xl w-[85%] h-[85%] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                alt="Administrare Database Server">
+                            <div class="absolute inset-0 bg-brand-card/30 "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-brand-card relative z-10 reveal border-t border-brand-text/5 scroll-mt-24 overflow-hidden">
+        <div class="max-w-[1000px] mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6">Întrebări Frecvente</h2>
+                <p class="text-xl text-brand-textlight font-light max-w-2xl mx-auto">
+                    Află cum serviciile noastre IT se pot adapta cerințelor specifice de business.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Cât de rapid interveniți în cazul
+                            unei
+                            defecțiuni critice?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Prin contractele noastre SLA (Service Level Agreement), garantăm timpi de răspuns specifici
+                            în funcție de severitatea problemei. Pentru incidente critice (Critical Priority) care
+                            opresc producția, intervenim în mai puțin de 15 minute, suportul fiind efectuat de ingineri
+                            seniori (L3).
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Puteți oferi mentenanță și suport
+                            pentru
+                            platforme dezvoltate de terți?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Da. Echipa noastră de experți poate prelua și administra cod legacy sau platforme dezvoltate
+                            de alte companii. Procesul începe cu un Audit Tehnic amănunțit pentru a evalua starea
+                            infrastructurii și vulnerabilitățile codului, urmat de refactoring și stabilizare.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Oferiți sesiuni de instruire
+                            recurente
+                            pentru angajații noi?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Absolut. Formarea continuă a echipei clientului reprezintă un punct forte SINTEC. Putem
+                            programa sesiuni de instruire trimenstriale sau on-demand ori de câte ori faceți noi
+                            angajări sau se impun actualizări majore de flux informațional.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div
+                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
+                        <span class="font-bold text-brand-text text-lg font-display">Ce presupune un Audit IT?</span>
+                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
+                        <div class="pt-4 border-t border-brand-text/10 mt-2">
+                            Auditul tehnic presupune maparea infrastructurii hardware și software actuale dintr-o
+                            organizație. Livrabilul final constă într-un raport de due-diligence care detaliază toate
+                            lacunele de securitate, ineficiențele operaționale și oferă un roadmap financiar pentru
+                            optimizarea resurselor.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Full Width Banner -->
+    <!-- CTA Banner Split Layout -->
+    <section class="relative bg-brand-navylight flex flex-col lg:flex-row min-h-[500px] overflow-hidden reveal border-t border-brand-text/5">
+        <!-- Left Side Image -->
+        <div class="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-full">
+            <div class="banner-diagonal-img-servicii !relative w-full h-full min-h-[300px]"></div>
+            <!-- Overlay to darken the image slightly for aesthetic purposes -->
+            <div class="absolute inset-0 bg-brand-navy/20"></div>
+            <!-- Vertical Divider Line (Visible on Desktop) -->
+            <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px] bg-brand-accent/30 z-10"></div>
+        </div>
+        
+        <!-- Right Side Content -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-12 lg:p-24 relative">
+            <!-- Subtle background glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-text/[0.02] to-transparent pointer-events-none"></div>
+            
+            <div class="max-w-xl w-full relative z-10">
+                <span class="inline-block mb-4 text-brand-accent font-mono text-sm font-bold tracking-[0.2em] uppercase">Hai să colaborăm</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">
+                    Ești gata să transformi ideea în realitate?
+                </h2>
+                <p class="text-xl text-brand-textlight font-light mb-10 leading-relaxed border-l-2 border-brand-accent/30 pl-6">
+                    Dacă te-ai decis că e timpul pentru o schimbare, suntem aici să facem calculele pentru tine.
+                    Solicită o ofertă personalizată și hai să trecem la treabă!
+                </p>
+                <a href="preview-contact.html"
+                    class="inline-flex items-center justify-center px-8 py-4 text-brand-navy bg-brand-accent hover:bg-brand-accentdark font-bold rounded-full transition-all duration-300 gap-3 group shadow-[0_0_20px_rgba(228,226,112,0.3)] hover:shadow-none hover:-translate-y-1">
+                    Trimite detaliile proiectului tău
+                    <svg class="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area CTA -->
+    <script src="footer.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
