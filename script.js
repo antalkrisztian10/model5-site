@@ -113,14 +113,14 @@
                 this.classList.add('active', 'bg-brand-text/5', 'text-brand-text', 'border-brand-text/10');
 
                 moduleContents.forEach(content => {
-                    content.classList.remove('opacity-100');
-                    content.classList.add('opacity-0', 'pointer-events-none');
+                    content.classList.remove('opacity-100', 'relative', 'z-10');
+                    content.classList.add('opacity-0', 'pointer-events-none', 'absolute', 'top-0', 'left-0', 'z-0');
                 });
 
                 const targetContent = document.getElementById(targetId);
                 if (targetContent) {
-                    targetContent.classList.remove('opacity-0', 'pointer-events-none');
-                    targetContent.classList.add('opacity-100');
+                    targetContent.classList.remove('opacity-0', 'pointer-events-none', 'absolute', 'top-0', 'left-0', 'z-0');
+                    targetContent.classList.add('opacity-100', 'relative', 'z-10');
                 }
             });
         });
@@ -267,4 +267,172 @@
             })
             .catch(error => console.error('Error loading footer:', error));
     }
+
+    // 10. Client Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const clientCards = document.querySelectorAll('.client-card');
+
+    if (filterBtns.length > 0 && clientCards.length > 0) {
+        // Calculate and append counts to buttons
+        filterBtns.forEach(btn => {
+            const filterValue = btn.getAttribute('data-filter');
+            let count = 0;
+
+            if (filterValue === 'toate') {
+                clientCards.forEach(card => {
+                    const cardCount = parseInt(card.getAttribute('data-count')) || 1;
+                    count += cardCount;
+                });
+            } else {
+                clientCards.forEach(card => {
+                    if (card.getAttribute('data-category') === filterValue) {
+                        const cardCount = parseInt(card.getAttribute('data-count')) || 1;
+                        count += cardCount;
+                    }
+                });
+            }
+
+            // Append count span to the button text
+            btn.innerHTML += ` <span class="ml-2 text-xs opacity-70 font-mono">(${count})</span>`;
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'border-brand-accent', 'bg-brand-accent/10', 'text-brand-text');
+                    b.classList.add('border-brand-text/10', 'text-brand-textlight', 'bg-brand-text/5');
+                });
+
+                // Add active class to clicked button
+                btn.classList.add('active', 'border-brand-accent', 'bg-brand-accent/10', 'text-brand-text');
+                btn.classList.remove('border-brand-text/10', 'text-brand-textlight', 'bg-brand-text/5');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                clientCards.forEach(card => {
+                    if (filterValue === 'toate' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                        // Small timeout to allow display:flex to apply before animating opacity/transform if needed
+                        setTimeout(() => {
+                            card.classList.remove('opacity-0', 'scale-95');
+                            card.classList.add('opacity-100', 'scale-100');
+                        }, 10);
+                    } else {
+                        card.classList.remove('opacity-100', 'scale-100');
+                        card.classList.add('opacity-0', 'scale-95');
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 });
+
+// 11. Global Image Lightbox Logic
+window.openImageModal = function (imgSrc) {
+    const modal = document.getElementById('image-modal');
+    const modalContent = document.getElementById('image-modal-content');
+    const imgElement = document.getElementById('image-modal-img');
+
+    if (modal && modalContent && imgElement) {
+        imgElement.src = imgSrc;
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closeImageModal = function () {
+    const modal = document.getElementById('image-modal');
+    const modalContent = document.getElementById('image-modal-content');
+
+    if (modal && modalContent) {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modalContent.classList.add('scale-95');
+        modalContent.classList.remove('scale-100');
+        document.body.style.overflow = '';
+    }
+};
+
+// 12. Global ERP Modal Logic
+window.openErpModal = function (modalId) {
+    const overlay = document.getElementById('erp-modal-overlay');
+    const backdrop = document.getElementById('erp-modal-backdrop');
+    const content = document.getElementById('erp-modal-content');
+    const bodyContainer = document.getElementById('modal-body-container');
+    const titleAccent = document.getElementById('modal-title-accent');
+    const titleText = document.getElementById('modal-title-text');
+
+    const contentStore = document.getElementById('data-' + modalId);
+
+    if (contentStore && overlay && bodyContainer) {
+        if (titleAccent && titleText) {
+            if (modalId === 'mod-balans-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'BALANS';
+                titleAccent.className = 'text-brand-accent';
+            } else if (modalId === 'mod-magnum-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'MAGNUM';
+                titleAccent.className = 'text-brand-blue';
+            } else if (modalId === 'mod-fare-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'FARE';
+                titleAccent.className = 'text-brand-accent';
+            } else if (modalId === 'mod-amix-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'AMIX';
+                titleAccent.className = 'text-brand-accent';
+            } else if (modalId === 'mod-lacom-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'LACOM';
+                titleAccent.className = 'text-brand-accent';
+            } else if (modalId === 'mod-parteneri-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'PARTENERI';
+                titleAccent.className = 'text-brand-accent';
+            } else if (modalId === 'mod-lapro-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'LAPRO';
+                titleAccent.className = 'text-brand-accent';
+            } else if (modalId === 'mod-persal-modal') {
+                titleAccent.textContent = 'Modulul';
+                titleText.textContent = 'PERSAL';
+                titleAccent.className = 'text-brand-accent';
+            }
+        }
+
+        bodyContainer.innerHTML = contentStore.innerHTML;
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+
+        setTimeout(() => {
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            content.classList.remove('opacity-0', 'scale-95');
+            content.classList.add('opacity-100', 'scale-100');
+        }, 10);
+    }
+};
+
+window.closeErpModal = function () {
+    const overlay = document.getElementById('erp-modal-overlay');
+    const backdrop = document.getElementById('erp-modal-backdrop');
+    const content = document.getElementById('erp-modal-content');
+
+    if (overlay && backdrop && content) {
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0');
+        content.classList.remove('opacity-100', 'scale-100');
+        content.classList.add('opacity-0', 'scale-95');
+
+        setTimeout(() => {
+            overlay.classList.remove('flex');
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+};

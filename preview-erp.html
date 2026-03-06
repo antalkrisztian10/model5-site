@@ -343,21 +343,31 @@
                         data-target="mod-parteneri">PARTENERI</button>
                     <button
                         class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
-                        data-target="mod-lapro">LAPRO</button>
-                    <button
-                        class="module-tab text-center px-6 py-3 rounded-full border border-transparent hover:bg-brand-text/5 text-brand-textlight hover:text-brand-text font-medium transition-all text-sm tracking-wide"
                         data-target="mod-persal">PERSAL</button>
                 </div>
 
                 <!-- Tabs Content -->
-                <div class="w-full grid mt-6">
+                <div class="w-full relative mt-6 transition-all duration-500 min-h-[400px]">
                     <!-- BALANS -->
                     <div id="mod-balans"
-                        class="module-content active row-start-1 col-start-1 opacity-100 transition-opacity duration-500 z-10">
+                        class="module-content active relative w-full opacity-100 transition-opacity duration-500 z-10">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="images/Balans.png" class="w-full h-full object-fill opacity-100" alt="BALANS">
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('images/Balans.png')">
+                                <img src="images/Balans.png"
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05]"
+                                    alt="BALANS">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul BALANS</h3>
@@ -392,11 +402,24 @@
                     </div>
                     <!-- MAGNUM -->
                     <div id="mod-magnum"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="images/Magnum.png" class="w-full h-full object-fill opacity-100" alt="MAGNUM">
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('images/Magnum.png')">
+                                <img src="images/Magnum.png"
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05]"
+                                    alt="MAGNUM">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul MAGNUM</h3>
@@ -431,11 +454,24 @@
                     </div>
                     <!-- FARE -->
                     <div id="mod-fare"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="images/Fare.png" class="w-full h-full object-fill opacity-100" alt="FARE">
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('images/Fare.png')">
+                                <img src="images/Fare.png"
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05]"
+                                    alt="FARE">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul FARE</h3>
@@ -470,12 +506,24 @@
                     </div>
                     <!-- AMIX -->
                     <div id="mod-amix"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
-                                    class="w-full h-full object-cover opacity-80" alt="AMIX">
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('images/Amix.png')">
+                                <img src="images/Amix.png"
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05] opacity-80 group-hover:opacity-100"
+                                    alt="AMIX">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul AMIX</h3>
@@ -484,20 +532,20 @@
                                     reevaluarea automată a acestora.</p>
                                 <ul class="space-y-4 text-sm text-brand-textlight">
                                     <li class="flex items-start gap-4"><svg
-                                            class="w-5 h-5 mt-0.5 shrink-0 text-purple-500" fill="none"
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M5 13l4 4L19 7" />
                                         </svg> <span>Liste intrări/ieșiri lunare</span></li>
                                     <li class="flex items-start gap-4"><svg
-                                            class="w-5 h-5 mt-0.5 shrink-0 text-purple-500" fill="none"
+                                            class="w-5 h-5 mt-0.5 shrink-0 text-brand-accent" fill="none"
                                             stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M5 13l4 4L19 7" />
                                         </svg> <span>Modificări de valoare a patrimoniului</span></li>
                                 </ul>
                                 <button onclick="openErpModal('mod-amix-modal')"
-                                    class="mt-8 text-purple-500 hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
+                                    class="mt-8 text-brand-accent hover:text-brand-text font-semibold flex items-center gap-2 group transition-colors">
                                     Vezi detalii complete
                                     <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -510,11 +558,24 @@
                     </div>
                     <!-- LACOM -->
                     <div id="mod-lacom"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="images/lacom.png" class="w-full h-full object-fill opacity-100" alt="LACOM">
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('images/lacom.png')">
+                                <img src="images/lacom.png"
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05]"
+                                    alt="LACOM">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul LACOM</h3>
@@ -549,12 +610,24 @@
                     </div>
                     <!-- PARTENERI -->
                     <div id="mod-parteneri"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="images/Parteneri.png" class="w-full h-full object-fill opacity-100"
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('images/Parteneri.png')">
+                                <img src="images/Parteneri.png"
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05]"
                                     alt="PARTENERI">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul PARTENERI</h3>
@@ -589,12 +662,24 @@
                     </div>
                     <!-- LAPRO -->
                     <div id="mod-lapro"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
+                            <div class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 w-full relative group cursor-pointer"
+                                onclick="openImageModal('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop')">
                                 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
-                                    class="w-full h-full object-cover opacity-80" alt="LAPRO">
+                                    class="w-full h-auto transition-transform duration-700 group-hover:scale-[1.05]"
+                                    alt="LAPRO">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul LAPRO</h3>
@@ -629,12 +714,24 @@
                     </div>
                     <!-- PERSAL -->
                     <div id="mod-persal"
-                        class="module-content row-start-1 col-start-1 opacity-0 pointer-events-none transition-opacity duration-500 z-0">
+                        class="module-content absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500 z-0">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div
-                                class="rounded-xl overflow-hidden shadow-2xl bg-brand-navylight border border-brand-text/10 h-64 md:h-[400px]">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                                    class="w-full h-full object-cover opacity-80" alt="PERSAL">
+                            <div class="rounded-xl overflow-hidden w-full h-80 md:h-[500px] flex items-center justify-center p-6 relative group cursor-pointer"
+                                onclick="openImageModal('images/PerSal.png')">
+                                <img src="images/PerSal.png"
+                                    class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.05]"
+                                    alt="PERSAL">
+                                <div
+                                    class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div
+                                        class="bg-brand-accent text-brand-navy font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                        Mărește
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-col justify-center py-4 md:py-0">
                                 <h3 class="text-2xl font-display font-bold text-brand-text mb-4">Modulul PERSAL</h3>
@@ -785,26 +882,6 @@
                             Absolut. Asigurăm mentenanță continuă și un birou de helpdesk dedicat. Mai mult, oferim
                             instruire pentru noii angajați și ne asigurăm că orice viitoare cerințe tehnice sunt
                             preluate cu prioritate.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ Item 4 -->
-                <div
-                    class="faq-item bg-brand-text/5 border border-brand-text/10 rounded-xl overflow-hidden transition-all duration-300">
-                    <button
-                        class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none hover:bg-brand-text/5 transition-colors">
-                        <span class="font-bold text-brand-text text-lg font-display">Se pot personaliza rapoartele din
-                            sistem?</span>
-                        <svg class="w-5 h-5 text-brand-textlight transform transition-transform duration-300 faq-icon"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="faq-content px-6 pb-5 text-brand-textlight font-light text-base hidden">
-                        <div class="pt-4 border-t border-brand-text/10 mt-2">
-                            Da, sistemul conține un generator de rapoarte integrat unde utilizatorul își poate selecta
-                            propriile criterii de filtrare, obținând situații recalculate la orice dată. Toate
-                            rapoartele pot fi salvate direct în Excel pentru analiză avansată.
                         </div>
                     </div>
                 </div>
@@ -978,16 +1055,17 @@
 
         <!-- Data: AMIX -->
         <div id="data-mod-amix-modal">
-            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-purple-500 pl-3">Modulul
+            <h4 class="text-xl font-bold text-brand-text font-display mb-4 border-l-4 border-brand-accent pl-3">Modulul
                 AMIX
                 (Mijloace Fixe)</h4>
             <p class="mb-4">Are ca obiectiv gestionarea mijloacelor fixe și calculul amortizărilor. Se păstrează
                 informațiile referitoare la evidenta pe gestiuni precum și la mișcările acestora. Pentru calculul
                 amortizărilor se poate utiliza regimul linear, degresiv sau accelerat.</p>
             <ul class="space-y-2 list-none pl-0 mt-4">
-                <li class="flex gap-3"><span class="text-purple-500 font-bold">•</span> Înregistrarea datelor (mijloace
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Înregistrarea datelor
+                    (mijloace
                     noi, transfer intern, conservare, reparatii);</li>
-                <li class="flex gap-3"><span class="text-purple-500 font-bold">•</span> Editarea de rapoarte: Liste
+                <li class="flex gap-3"><span class="text-brand-accent font-bold">•</span> Editarea de rapoarte: Liste
                     intrări/ieșiri, parcurs lunar, modificări de valoare.</li>
             </ul>
         </div>
@@ -1088,7 +1166,7 @@
                 } else if (modalId === 'mod-amix-modal') {
                     titleAccent.textContent = 'Modulul';
                     titleText.textContent = 'AMIX';
-                    titleAccent.className = 'text-purple-500';
+                    titleAccent.className = 'text-brand-accent';
                 } else if (modalId === 'mod-lacom-modal') {
                     titleAccent.textContent = 'Modulul';
                     titleText.textContent = 'LACOM';
@@ -1148,7 +1226,58 @@
             }
         }
     </script>
+
+    <!-- Image Modal/Lightbox (Global) -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-navy/95 backdrop-blur-md" onclick="closeImageModal()"></div>
+        <div class="relative w-full h-full max-w-7xl flex items-center justify-center transform scale-95 transition-all duration-300"
+            id="image-modal-content">
+            <button onclick="closeImageModal()"
+                class="absolute top-0 right-0 z-10 text-brand-text hover:text-brand-accent bg-brand-navy/50 hover:bg-brand-navy p-3 rounded-full transition-colors m-4">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <img id="image-modal-img" src="" alt="Full resolution view"
+                class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border border-brand-accent/20">
+        </div>
+    </div>
+
+    <!-- Scroll Animation Script -->
     <script src="script.js"></script>
+
+    <script>
+        // Image Lightbox Logic
+        function openImageModal(imgSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalContent = document.getElementById('image-modal-content');
+            const imgElement = document.getElementById('image-modal-img');
+
+            // Set source first
+            imgElement.src = imgSrc;
+
+            // Show modal
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('image-modal');
+            const modalContent = document.getElementById('image-modal-content');
+
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.add('scale-95');
+            modalContent.classList.remove('scale-100');
+
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
+    </script>
 </body>
 
 </html>

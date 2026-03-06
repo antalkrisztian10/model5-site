@@ -102,9 +102,10 @@
 
         /* Top Navigation */
         .top-nav {
-            background-color: rgba(var(--brand-navylight-ch), 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(var(--brand-darkest-ch), 0.05);
+            background-color: rgb(var(--brand-dark-ch) / 0.97);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgb(var(--brand-darkest-ch) / 0.05);
+            box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.4);
         }
 
         .nav-link {
@@ -904,12 +905,13 @@
                         </div>
 
                         <!-- Location -->
-                        <div class="relative group z-10">
+                        <a href="https://www.google.com/maps/place/Strada+Victoriei+148A,+Baia+Mare" target="_blank"
+                            class="relative group z-10 block">
                             <div
                                 class="absolute -inset-[2px] bg-gradient-to-r from-brand-accent to-brand-blue rounded-[1.5rem] opacity-0 group-hover:opacity-100 transition duration-700 blur-[6px]">
                             </div>
                             <div
-                                class="relative flex items-center lg:items-start gap-5 p-6 md:p-8 rounded-[1.5rem] bg-brand-navylight/90 backdrop-blur-md border border-brand-text/10 overflow-hidden transform group-hover:-translate-y-1 transition-transform duration-500">
+                                class="relative flex items-center lg:items-start gap-5 p-6 md:p-8 rounded-[1.5rem] bg-brand-navylight/90 backdrop-blur-md border border-brand-text/10 overflow-hidden transform group-hover:-translate-y-1 transition-transform duration-500 flex-1 w-full">
                                 <div
                                     class="absolute -right-8 -top-8 w-32 h-32 bg-brand-accent/10 rounded-full blur-[40px] group-hover:bg-brand-accent/20 transition-all duration-700">
                                 </div>
@@ -928,13 +930,14 @@
                                     <h4
                                         class="text-brand-text font-display font-bold mb-2 text-xl tracking-wide group-hover:text-brand-accent transition-colors duration-300">
                                         Sediul Central</h4>
-                                    <p class="text-brand-textlight font-light text-base leading-relaxed">
+                                    <p
+                                        class="text-brand-textlight font-light text-base leading-relaxed group-hover:text-white transition-colors duration-300">
                                         Strada Victoriei Nr 148A<br />
                                         Baia Mare, România
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Phone -->
                         <div class="relative group z-10">
@@ -1120,8 +1123,8 @@
         </div>
 
         <div class="absolute bottom-12 left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0 z-20">
-            <div
-                class="bg-brand-navylight/90 backdrop-blur-md border border-brand-text/20 p-6 rounded-2xl shadow-2xl flex items-center gap-4 group cursor-pointer hover:bg-brand-navylight transition-colors">
+            <a href="https://www.google.com/maps/place/Strada+Victoriei+148A,+Baia+Mare" target="_blank"
+                class="bg-brand-navylight/90 backdrop-blur-md border border-brand-text/20 p-6 rounded-2xl shadow-2xl flex items-center gap-4 group cursor-pointer hover:bg-brand-navylight transition-colors block">
                 <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center animate-pulse">
                     <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1140,7 +1143,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
